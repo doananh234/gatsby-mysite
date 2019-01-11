@@ -1,13 +1,13 @@
 import styled from 'styled-components';
-import { palette } from 'styled-theme';
+import { palette, key } from 'styled-theme';
 
 export const MagicalButton = styled.a`
-  color: #fff;
+  color: ${palette('text', 0)};
   text-decoration: none;
   padding: 0.9rem 1.4rem;
   background: ${palette('primary', 0)};
   border-radius: 0.3rem;
-  box-shadow: 1px 5px 2px 1px ${palette('shadow', 1)};
+  box-shadow: 1px 2px 2px 1px ${palette('shadow', 1)};
   transition: 0.5s;
 
   @media (max-width: 380px) {
@@ -17,7 +17,7 @@ export const MagicalButton = styled.a`
   }
 
   &:hover {
-    box-shadow: 1px 1px 2px 1px ${palette('shadow', 1)};
+    box-shadow: 1px 1px 1px 1px ${palette('shadow', 1)};
     transition: 0.5s;
   }
 
@@ -25,10 +25,10 @@ export const MagicalButton = styled.a`
     margin-right: 1rem;
     background: ${palette('grayscale', 6)};
     color: ${palette('primary', 0)};
-    box-shadow: 1px 1px 2px 0 ${palette('shadow', 0)};
+    box-shadow: 1px 1px 1px 0 ${palette('shadow', 0)};
 
     &:hover {
-      box-shadow: 1px 1px 2px 0 ${palette('shadow', 0)};
+      box-shadow: 1px 1px 1px 0 ${palette('shadow', 0)};
     }
 
     @media (max-width: 380px) {
@@ -39,13 +39,11 @@ export const MagicalButton = styled.a`
 
 export const Wrapper = styled.div`
   padding: 4rem 1rem;
-
+  color: ${theme => key([theme.themeType, 'text', 0])(theme)};
   p {
-    color: gray;
+    color: ${palette('grayscale', 1)};
     margin-bottom: 2rem;
   }
-
-  ${({ theme }) => theme === 'dark' && 'color: #fff;'}
 `;
 
 export const Flex = styled.div`

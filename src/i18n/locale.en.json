@@ -41,5 +41,13 @@
     "link": {
       "cv": "google.com"
     }
+  },
+  "skills": {
+    "title": "Skills",
+    "readMore": "See the tech tools I use?"
+  },
+  "work": {
+    "title": "Work",
+    "sideProjects": "Side Projects"
   }
 }
