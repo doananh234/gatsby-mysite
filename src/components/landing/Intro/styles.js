@@ -7,7 +7,7 @@ export const MagicalButton = styled.a`
   padding: 0.9rem 1.4rem;
   background: ${palette('primary', 0)};
   border-radius: 0.3rem;
-  box-shadow: 1px 1px 2px 0 ${palette('shadow', 0)};
+  box-shadow: 1px 5px 2px 1px ${palette('shadow', 1)};
   transition: 0.5s;
 
   @media (max-width: 380px) {
@@ -17,18 +17,18 @@ export const MagicalButton = styled.a`
   }
 
   &:hover {
-    box-shadow: 1px 1px 2px 0 ${palette('shadow', 0)};
+    box-shadow: 1px 1px 2px 1px ${palette('shadow', 1)};
     transition: 0.5s;
   }
 
   &:first-child {
     margin-right: 1rem;
-    background: #f9f9f9;
-    color: #00c3ff;
-    box-shadow: rgb(185, 185, 185) 0px 13px 19px -6px;
+    background: ${palette('grayscale', 6)};
+    color: ${palette('primary', 0)};
+    box-shadow: 1px 1px 2px 0 ${palette('shadow', 0)};
 
     &:hover {
-      box-shadow: 0px 0px 17px 0px rgba(185, 185, 185, 0.4);
+      box-shadow: 1px 1px 2px 0 ${palette('shadow', 0)};
     }
 
     @media (max-width: 380px) {
@@ -45,10 +45,7 @@ export const Wrapper = styled.div`
     margin-bottom: 2rem;
   }
 
-  ${({ theme }) => theme === 'dark'
-    && `
-			color: #fff;
-	`}
+  ${({ theme }) => theme === 'dark' && 'color: #fff;'}
 `;
 
 export const Flex = styled.div`

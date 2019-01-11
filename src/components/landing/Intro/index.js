@@ -1,32 +1,33 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import { SmallerContainer, ThemeContext } from 'Common'
-import { MagicalButton, Wrapper, Flex } from './styles'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Link } from 'gatsby';
+import { withI18n } from 'react-i18next';
+import { SmallerContainer, ThemeContext } from '../../common';
+import { MagicalButton, Wrapper, Flex } from './styles';
 
-const Intro = () => (
-  <ThemeContext.Consumer>
-    {({ theme }) => (
-      <Wrapper theme={theme} as={SmallerContainer}>
-        <h1>I'm Anh Doan</h1>
-        <p>
-          Also known as doananh234, a self-taught Full Stack JavaScript Developer,
-          Graphic and UI/UX Designer.
-        </p>
-        <Flex>
-          <MagicalButton
-            href="https://docs.google.com/document/d/1yxCORtBMNxj_ukgOxoYQfRu3HTUqjtNXwcMajzcftF8"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            View resume
-          </MagicalButton>
-          <MagicalButton as={Link} to="/contact">
-            Get In Touch
-          </MagicalButton>
-        </Flex>
-      </Wrapper>
-    )}
-  </ThemeContext.Consumer>
-)
+const IntroUI = ({ t }) => {
+  return (
+    <ThemeContext.Consumer>
+      {({ theme }) => (
+        <Wrapper theme={theme} as={SmallerContainer}>
+          <h1>{t('intro.title')}</h1>
+          <p>{t('intro.description')}</p>
+          <Flex>
+            <MagicalButton href={t('intro.link.cv')} rel="noopener noreferrer" target="_blank">
+              {t('intro.button.viewResume')}
+            </MagicalButton>
+            <MagicalButton as={Link} to="/contact">
+              {t('intro.button.getInTouch')}
+            </MagicalButton>
+          </Flex>
+        </Wrapper>
+      )}
+    </ThemeContext.Consumer>
+  );
+};
 
-export { Intro }
+IntroUI.propTypes = {
+  t: PropTypes.func,
+};
+
+export const Intro = withI18n()(IntroUI);

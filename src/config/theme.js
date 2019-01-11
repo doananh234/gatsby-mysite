@@ -98,7 +98,7 @@ theme.palette = {
     '#dd4a68', // 4:
     '#e90', // 5:
   ],
-  shadow: ['rgba(0,0,0,0.2)'],
+  shadow: ['rgba(10,10,10,0.2)', 'rgba(0,195,255, 0.2)'],
 };
 
 theme.fonts = {
