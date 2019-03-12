@@ -1,9 +1,11 @@
 ---
 template: post
+thumbnail: >-
+  https://res.cloudinary.com/csmenouvo/image/fetch/v1551166037/http://res.cloudinary.com/csmenouvo/image/upload/v1551166036/75.jpg
 title: test new post
-slug: '/posts/test-new-post/'
-path: '/test-new-post'
-thumbnail: ./test-Why-I-created-Unnamed/unnamed_blog.jpeg
+slug: /posts/test-new-post/
+path: /test-new-post
+next: /
 draft: false
 date: 2019-03-12T15:55:25.186Z
 description: t
