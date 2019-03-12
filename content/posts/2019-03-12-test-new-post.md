@@ -1,7 +1,6 @@
 ---
 template: post
-thumbnail: >-
-  https://res.cloudinary.com/csmenouvo/image/fetch/v1551166037/http://res.cloudinary.com/csmenouvo/image/upload/v1551166036/75.jpg
+thumbnail: './test-Why-I-created-Unnamed/unnamed_blog.jpeg'
 title: test new post
 slug: /posts/test-new-post/
 path: /test-new-post
