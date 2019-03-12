@@ -15,7 +15,6 @@ import {
 } from './styles';
 
 const CardPost = ({ node }) => {
-  console.log('node', node);
   return (
     <ThemeContext.Consumer>
       {({ theme }) => (
