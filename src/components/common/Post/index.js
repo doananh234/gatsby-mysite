@@ -12,7 +12,7 @@ export const Post = ({ html, frontmatter, timeToRead }) => (
     {({ theme }) => {
       const disqusShortName = 'https-doananh234-com';
       const disqusConfig = {
-        url: `https://doananh234.com${frontmatter.path}`,
+        url: frontmatter.url,
         identifier: frontmatter.id,
         title: frontmatter.title,
       };
