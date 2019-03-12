@@ -14,31 +14,36 @@ import {
   StyledSpan,
 } from './styles';
 
-const CardPost = ({ node }) => (
-  <ThemeContext.Consumer>
-    {({ theme }) => (
-      <Item>
-        <Post onClick={() => navigate(node.fields.slug)} theme={theme}>
-          <ArticleImg>
-            <Img fluid={node.frontmatter.thumbnail.childImageSharp.fluid} />
-          </ArticleImg>
-          <ArticleContent>
-            <ArticleTitle theme={theme}>{node.frontmatter.title}</ArticleTitle>
-            <Paragraph theme={theme}>{node.excerpt}</Paragraph>
-            <Info theme={theme}>
-              {node.frontmatter.date}
-              <StyledSpan>
-                {node.timeToRead}
-                {' '}
+const CardPost = ({ node }) => {
+  console.log('node', node);
+  return (
+    <ThemeContext.Consumer>
+      {({ theme }) => (
+        <Item>
+          <Post onClick={() => navigate(node.fields.slug)} theme={theme}>
+            <ArticleImg>
+              {node.frontmatter.thumbnail && (
+                <Img fluid={node.frontmatter.thumbnail.childImageSharp.fluid} />
+              )}
+            </ArticleImg>
+            <ArticleContent>
+              <ArticleTitle theme={theme}>{node.frontmatter.title}</ArticleTitle>
+              <Paragraph theme={theme}>{node.excerpt}</Paragraph>
+              <Info theme={theme}>
+                {node.frontmatter.date}
+                <StyledSpan>
+                  {node.timeToRead}
+                  {' '}
 min
-              </StyledSpan>
-            </Info>
-          </ArticleContent>
-        </Post>
-      </Item>
-    )}
-  </ThemeContext.Consumer>
-);
+                </StyledSpan>
+              </Info>
+            </ArticleContent>
+          </Post>
+        </Item>
+      )}
+    </ThemeContext.Consumer>
+  );
+};
 
 CardPost.propTypes = {
   node: PropTypes.object,

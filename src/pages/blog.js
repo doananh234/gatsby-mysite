@@ -9,7 +9,11 @@ const Blog = () => (
   <StaticQuery
     query={graphql`
       query BlogQuery {
-        allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }, limit: 20) {
+        allMarkdownRemark(
+          filter: { frontmatter: { template: { eq: "post" }, draft: { ne: true } } }
+          sort: { order: DESC, fields: [frontmatter___date] }
+          limit: 20
+        ) {
           edges {
             node {
               excerpt(pruneLength: 230)

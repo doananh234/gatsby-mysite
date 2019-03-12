@@ -126,6 +126,13 @@ module.exports = {
                       template
                       draft
                       description
+                      thumbnail {
+                        childImageSharp {
+                          fluid(maxWidth: 700) {
+                            originalImg
+                          }
+                        }
+                      }
 										}
 									}
 								}
