@@ -11,7 +11,7 @@ const PostTemplate = ({ data }) => {
 
   return (
     <Layout title={`${postTitle} - ${siteTitle}`} description={metaDescription}>
-      <Post post={data.markdownRemark} />
+      <Post {...data.markdownRemark} />
     </Layout>
   );
 };
