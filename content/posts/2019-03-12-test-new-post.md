@@ -2,7 +2,7 @@
 template: post
 title: test new post
 slug: test-new-post
-draft: true
+draft: false
 date: 2019-03-12T15:55:25.186Z
 description: t
 category: UI-UX
