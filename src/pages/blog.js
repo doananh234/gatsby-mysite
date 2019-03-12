@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { StaticQuery, graphql } from 'gatsby';
 import {
  Layout, Container, SEO, PageTitle, CardPost,
-} from 'Common';
+} from '../components/common';
 
 const Blog = () => (
   <StaticQuery

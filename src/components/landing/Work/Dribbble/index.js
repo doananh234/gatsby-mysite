@@ -1,6 +1,6 @@
-import React from 'react'
-import { Project, DribbbleIcon } from 'Common'
-import { StaticQuery, graphql } from 'gatsby'
+import React from 'react';
+import { StaticQuery, graphql } from 'gatsby';
+import { Project, DribbbleIcon } from '../../../common';
 
 export default () => (
   <StaticQuery
@@ -35,4 +35,4 @@ export default () => (
       />
     )}
   />
-)
+);

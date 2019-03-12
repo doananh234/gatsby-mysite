@@ -1,12 +1,18 @@
-import React from 'react'
-import styled from 'styled-components'
-import Img from 'gatsby-image'
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
+import Img from 'gatsby-image';
 
 const CardBody = ({ title, image }) => (
   <Wrapper>
     <Img fluid={image.childImageSharp.fluid} alt={title} />
   </Wrapper>
-)
+);
+
+CardBody.propTypes = {
+  title: PropTypes.string,
+  image: PropTypes.string,
+};
 
 const Wrapper = styled.div`
   overflow: visible;
@@ -25,6 +31,6 @@ const Wrapper = styled.div`
     display: block;
     transition: 0.3s;
   }
-`
+`;
 
-export default CardBody
+export default CardBody;

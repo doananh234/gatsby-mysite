@@ -1,6 +1,6 @@
-import React from 'react'
-import { BehanceIcon, Project } from 'Common'
-import { StaticQuery, graphql } from 'gatsby'
+import React from 'react';
+import { StaticQuery, graphql } from 'gatsby';
+import { BehanceIcon, Project } from '../../../common';
 
 export default () => (
   <StaticQuery
@@ -35,4 +35,4 @@ export default () => (
       />
     )}
   />
-)
+);

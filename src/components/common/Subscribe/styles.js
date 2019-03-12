@@ -1,16 +1,16 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const FormWrapper = styled.div`
   text-align: center;
   padding-top: 3rem;
-`
+`;
 
 export const StyledForm = styled.div`
   width: 70%;
   margin: 0 auto;
   background: #fff;
-  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2),
-    0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14),
+    0px 3px 1px -2px rgba(0, 0, 0, 0.12);
   border-radius: 5px;
   position: relative;
   margin-bottom: -12rem;
@@ -25,13 +25,12 @@ export const StyledForm = styled.div`
     width: 100%;
   }
 
-  ${({ theme }) =>
-    theme === 'dark' &&
-    `
-		background: #212121;
-		color: #fff;
-	`};
-`
+  ${({ theme }) => theme === 'dark'
+    && `
+  background: #212121;
+  color: #fff;
+`};
+`;
 
 export const Subtitle = styled.p`
   margin-bottom: 1em;
@@ -44,12 +43,11 @@ export const Subtitle = styled.p`
     font-size: 0.8em;
   }
 
-  ${({ theme }) =>
-    theme === 'dark' &&
-    `
-		color: #fff;
-	`};
-`
+  ${({ theme }) => theme === 'dark'
+    && `
+color: #fff;
+`};
+`;
 
 export const Title = styled.h3`
   margin: 0 0 3px;
@@ -63,12 +61,11 @@ export const Title = styled.h3`
     font-size: 1em;
   }
 
-  ${({ theme }) =>
-    theme === 'dark' &&
-    `
-		color: #fff;
-	`};
-`
+  ${({ theme }) => theme === 'dark'
+    && `
+  color: #fff;
+`};
+`;
 
 export const Message = styled.h4`
   margin: 1rem 0;
@@ -79,17 +76,16 @@ export const Message = styled.h4`
     width: 90%;
     margin: 1rem auto;
   }
-`
+`;
 
 export const Error = styled.div`
   color: red;
 
-  ${({ server }) =>
-    server &&
-    `
-			margin-top: 1rem;
-	`};
-`
+  ${({ server }) => server
+    && `
+    margin-top: 1rem;
+`};
+`;
 
 export const Fields = styled.div`
   display: flex;
@@ -103,7 +99,7 @@ export const Fields = styled.div`
   @media (max-width: 800px) {
     flex-direction: column;
   }
-`
+`;
 
 export const Input = styled.input`
   padding: 0.5rem;
@@ -117,9 +113,8 @@ export const Input = styled.input`
     margin-bottom: 1rem;
   }
 
-  ${({ error }) =>
-    error &&
-    `
-		border-color: #e53935;
-	`};
-`
+  ${({ error }) => error
+    && `
+  border-color: #e53935;
+`};
+`;

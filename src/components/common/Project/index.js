@@ -1,15 +1,14 @@
-import React from 'react'
-import { Card, More, ThemeContext, Repository } from 'Common'
-import { Wrapper, Work, Icon, Title } from './styles'
+import React from 'react';
+import PropTypes from 'prop-types';
+import {
+ Card, More, ThemeContext, Repository,
+} from '..';
+import {
+ Wrapper, Work, Icon, Title,
+} from './styles';
 
 export const Project = ({
-  title,
-  projects,
-  link,
-  side,
-  color,
-  icon,
-  github,
+ title, projects, link, side, color, icon, github,
 }) => (
   <ThemeContext.Consumer>
     {({ theme }) => (
@@ -19,7 +18,7 @@ export const Project = ({
           {!github
             ? projects.edges.map(({ node }) => <Card key={node.id} {...node} />)
             : projects.map((project, index) => (
-                <Repository key={project.node.id} id={index} {...project} />
+              <Repository key={project.node.id} id={index} {...project} />
               ))}
           {!side && (
             <More link={link} color={color}>
@@ -30,4 +29,14 @@ export const Project = ({
       </Wrapper>
     )}
   </ThemeContext.Consumer>
-)
+);
+
+Project.propTypes = {
+  title: PropTypes.string,
+  projects: PropTypes.any,
+  link: PropTypes.string,
+  side: PropTypes.any,
+  color: PropTypes.string,
+  icon: PropTypes.string,
+  github: PropTypes.any,
+};

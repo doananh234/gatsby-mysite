@@ -1,9 +1,9 @@
-import React from 'react'
-import { graphql } from 'gatsby'
-import { Container, Subtitle } from 'Common'
-import Behance from './Behance'
-import Dribbble from './Dribbble'
-import SideProjects from './SideProjects'
+import React from 'react';
+import { graphql } from 'gatsby';
+import { Container, Subtitle } from '../../common';
+import Behance from './Behance';
+import Dribbble from './Dribbble';
+import SideProjects from './SideProjects';
 
 export const imageFields = graphql`
   fragment imageFields on ImageSharp {
@@ -11,7 +11,7 @@ export const imageFields = graphql`
       ...GatsbyImageSharpFluid_tracedSVG
     }
   }
-`
+`;
 
 export const Work = () => (
   <Container>
@@ -20,4 +20,4 @@ export const Work = () => (
     <Behance />
     <Dribbble />
   </Container>
-)
+);

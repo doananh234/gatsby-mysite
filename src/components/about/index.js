@@ -1,2 +1,2 @@
-export * from './Details'
-export * from './Socials'
+export * from './Details';
+export * from './Socials';

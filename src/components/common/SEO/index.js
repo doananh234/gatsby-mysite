@@ -1,6 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
-import Thumbnail from 'Static/me.jpg';
 import {
   url,
   defaultTitle,
@@ -13,7 +13,8 @@ import {
   foundingDate,
   logo,
   author,
-} from 'Data';
+} from '../../../../data/Config';
+import Thumbnail from '../../../../static/me.jpg';
 
 export const SEO = ({
   title,
@@ -26,70 +27,70 @@ export const SEO = ({
   location = '',
 }) => {
   const structuredDataArticle = `{
-		"@context": "http://schema.org",
-		"@type": "${type}",
-		"mainEntityOfPage": {
-			"@type": "WebPage",
-			"@id": "https://google.com/article"
-		},
-		"headline": "${description}",
-		"image": {
-			"@type": "imageObject",
-			"url": "${cover ? `https://doananh234.com${cover}` : `https://doananh234.com${Thumbnail}`}",
-			"height": "600",
-			"width": "800"
-		},
-		"datePublished": "${datePublished}",
-		"dateModified": "${dateModified}",
-		"author": {
-			"@type": "Person",
-			"name": "${author}"
-		},
-		"articleBody": "${articleBody}",
-		"publisher": {
-			"@type": "Organization",
-			"name": "${author}",
-			"logo": {
-				"@type": "ImageObject",
-				"url": "${logo}"
-			}
-		},
-		"description": "${description}",
-		"url": "${url}${location}/?ref=doananh234.com"
-	}`;
+"@context": "http://schema.org",
+"@type": "${type}",
+"mainEntityOfPage": {
+"@type": "WebPage",
+"@id": "https://google.com/article"
+},
+"headline": "${description}",
+"image": {
+"@type": "imageObject",
+"url": "${cover ? `https://doananh234.com${cover}` : `https://doananh234.com${Thumbnail}`}",
+"height": "600",
+"width": "800"
+},
+"datePublished": "${datePublished}",
+"dateModified": "${dateModified}",
+"author": {
+"@type": "Person",
+"name": "${author}"
+},
+"articleBody": "${articleBody}",
+"publisher": {
+"@type": "Organization",
+"name": "${author}",
+"logo": {
+"@type": "ImageObject",
+"url": "${logo}"
+}
+},
+"description": "${description}",
+"url": "${url}${location}/?ref=doananh234.com"
+}`;
 
   const structuredDataOrganization = `{ 
-		"@context": "http://schema.org",
-		"@type": "${type}",
-		"legalName": "${legalName}",
-		"url": "${url}",
-		"logo": "${logo}",
-		"foundingDate": "${foundingDate}",
-		"founders": [{
-			"@type": "Person",
-			"name": "${legalName}"
-		}],
-		"contactPoint": [{
-			"@type": "ContactPoint",
-			"email": "${contact.email}",
-			"telephone": "${contact.phone}",
-			"contactType": "customer service"
-		}],
-		"address": {
-			"@type": "PostalAddress",
-			"addressLocality": "${address.city}",
-			"addressRegion": "${address.region}",
-			"addressCountry": "${address.country}",
-			"postalCode": "${address.zipCode}"
-		},
-		"sameAs": [
-			"${socialLinks.twitter}",
-			"${socialLinks.youtube}",
-			"${socialLinks.linkedin}",
-			"${socialLinks.instagram}",
-			"${socialLinks.github}"
-		]
-  	}`;
+"@context": "http://schema.org",
+"@type": "${type}",
+"legalName": "${legalName}",
+"url": "${url}",
+"logo": "${logo}",
+"foundingDate": "${foundingDate}",
+"founders": [{
+"@type": "Person",
+"name": "${legalName}"
+}],
+"contactPoint": [{
+"@type": "ContactPoint",
+"email": "${contact.email}",
+"telephone": "${contact.phone}",
+"contactType": "customer service"
+}],
+"address": {
+"@type": "PostalAddress",
+"addressLocality": "${address.city}",
+"addressRegion": "${address.region}",
+"addressCountry": "${address.country}",
+"postalCode": "${address.zipCode}"
+},
+"sameAs": [
+"${socialLinks.twitter}",
+"${socialLinks.youtube}",
+"${socialLinks.linkedin}",
+"${socialLinks.instagram}",
+"${socialLinks.github}"
+]
+}`;
 
   return (
     <Helmet>
@@ -116,4 +117,15 @@ export const SEO = ({
       <html lang="en" dir="ltr" />
     </Helmet>
   );
+};
+
+SEO.propTypes = {
+  title: PropTypes.string,
+  type: PropTypes.string,
+  description: PropTypes.string,
+  articleBody: PropTypes.any,
+  datePublished: PropTypes.any,
+  dateModified: PropTypes.any,
+  cover: PropTypes.any,
+  location: PropTypes.any,
 };

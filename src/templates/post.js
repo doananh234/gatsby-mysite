@@ -1,7 +1,9 @@
-import React from 'react'
-import { graphql } from 'gatsby'
-import { Layout, SmallerContainer, SEO, Post } from 'Common'
-import './highlight.scss'
+import React from 'react';
+import { graphql } from 'gatsby';
+import {
+ Layout, SmallerContainer, SEO, Post,
+} from '../components/common';
+import './highlight.scss';
 
 const Template = ({ data: { post } }) => (
   <Layout>
@@ -11,18 +13,14 @@ const Template = ({ data: { post } }) => (
         title={post.frontmatter.title}
         articleBody={post.html}
         datePublished={post.frontmatter.date}
-        dateModified={
-          post.frontmatter.edited
-            ? post.frontmatter.edited
-            : post.frontmatter.date
-        }
+        dateModified={post.frontmatter.edited ? post.frontmatter.edited : post.frontmatter.date}
         cover={post.frontmatter.thumbnail.childImageSharp.fluid.originalImg}
         location={post.frontmatter.path}
       />
       <Post {...post} />
     </SmallerContainer>
   </Layout>
-)
+);
 
 export const postQuery = graphql`
   query($path: String!) {
@@ -44,6 +42,6 @@ export const postQuery = graphql`
       }
     }
   }
-`
+`;
 
-export default Template
+export default Template;

@@ -1,6 +1,6 @@
-import React from 'react'
-import { Project } from 'Common'
-import { StaticQuery, graphql } from 'gatsby'
+import React from 'react';
+import { StaticQuery, graphql } from 'gatsby';
+import { Project } from '../../../common';
 
 export default () => (
   <StaticQuery
@@ -25,8 +25,6 @@ export default () => (
         }
       }
     `}
-    render={({ sideProjects }) => (
-      <Project title="Side Projects" projects={sideProjects} side />
-    )}
+    render={({ sideProjects }) => <Project title="Side Projects" projects={sideProjects} side />}
   />
-)
+);

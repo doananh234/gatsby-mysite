@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 import {
   FacebookShareButton,
   GooglePlusShareButton,
@@ -12,9 +13,9 @@ import {
   GooglePlusIcon,
   LinkedinIcon,
   RedditIcon,
-} from 'react-share'
-import config from 'Data'
-import { Wrapper } from './styles'
+} from 'react-share';
+import config from '../../../../data/Config';
+import { Wrapper } from './styles';
 
 export const SocialShare = ({ title, path, iconSize = 32 }) => (
   <Wrapper>
@@ -30,15 +31,17 @@ export const SocialShare = ({ title, path, iconSize = 32 }) => (
     <FacebookShareButton url={`${config.url}${path}`} quote={title}>
       <FacebookIcon round size={iconSize} />
     </FacebookShareButton>
-    <LinkedinShareButton
-      url={`${config.url}${path}`}
-      title={title}
-      description={title}
-    >
+    <LinkedinShareButton url={`${config.url}${path}`} title={title} description={title}>
       <LinkedinIcon round size={iconSize} />
     </LinkedinShareButton>
     <TelegramShareButton url={`${config.url}${path}`}>
       <TelegramIcon round size={iconSize} />
     </TelegramShareButton>
   </Wrapper>
-)
+);
+
+SocialShare.propTypes = {
+  title: PropTypes.string,
+  path: PropTypes.string,
+  iconSize: PropTypes.string,
+};

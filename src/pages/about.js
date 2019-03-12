@@ -4,8 +4,8 @@ import { StaticQuery, graphql } from 'gatsby';
 import styled from 'styled-components';
 import {
  Layout, Container, SEO, PageTitle,
-} from 'Common';
-import { Details, Socials } from 'Components/about';
+} from '../components/common';
+import { Details, Socials } from '../components/about';
 
 const About = () => (
   <StaticQuery

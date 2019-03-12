@@ -1,15 +1,12 @@
-const path = require('path')
+const path = require('path');
 
 exports.createPages = ({ actions, graphql }) => {
-  const { createPage } = actions
-  const postTemplate = path.resolve('src/templates/post.js')
+  const { createPage } = actions;
+  const postTemplate = path.resolve('src/templates/post.js');
 
   return graphql(`
     {
-      allMarkdownRemark(
-        sort: { order: DESC, fields: [frontmatter___date] }
-        limit: 1000
-      ) {
+      allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }, limit: 1000) {
         edges {
           node {
             excerpt(pruneLength: 250)
@@ -37,17 +34,17 @@ exports.createPages = ({ actions, graphql }) => {
     }
   `).then(res => {
     if (res.errors) {
-      return Promise.reject(res.errors)
+      return Promise.reject(res.errors);
     }
 
     return res.data.allMarkdownRemark.edges.forEach(({ node }) => {
       createPage({
         path: node.frontmatter.path,
         component: postTemplate,
-      })
-    })
-  })
-}
+      });
+    });
+  });
+};
 
 exports.onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({
@@ -57,8 +54,8 @@ exports.onCreateWebpackConfig = ({ actions }) => {
         Common: `${__dirname}/src/components/common`,
         Static: `${__dirname}/static/`,
         Theme: `${__dirname}/src/components/theme`,
-        Data: `${__dirname}/data/config`,
+        Data: `${__dirname}/data/Config`,
       },
     },
-  })
-}
+  });
+};
