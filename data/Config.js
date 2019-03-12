@@ -2,7 +2,6 @@ module.exports = {
   defaultTitle: 'doananh234',
   url: 'https://anhdoan.com',
   logo: 'https://doananh234.com/favicon/logo-48.png',
-  author: 'Anh Doan (doananh234)',
   title: 'Blog by Anh Doan',
   subtitle: 'Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.',
   copyright: '© All rights reserved.',
@@ -20,6 +19,22 @@ module.exports = {
   themeColor: '#00c6ff',
   backgroundColor: '#00c6ff',
   siteRss: '/rss.xml',
+  disqusShortname: '',
+  postsPerPage: 4,
+  menu: [
+    {
+      label: 'Articles',
+      path: '/',
+    },
+    {
+      label: 'About me',
+      path: '/pages/about',
+    },
+    {
+      label: 'Contact me',
+      path: '/pages/contacts',
+    },
+  ],
   social: {
     facebook: '100000217272538',
     twitter: '@doananh234',
@@ -35,4 +50,5 @@ module.exports = {
     phone: '+84789472011',
   },
   foundingDate: '2018',
+  author: 'Anh Doan',
 };

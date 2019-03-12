@@ -83,12 +83,10 @@ module.exports = {
               subtitle,
               copyright,
               disqusShortname,
-              menu,
               author,
 							rssMetadata {
 								site_url
 								title
-								author
 								author
 								copyright
 								description
