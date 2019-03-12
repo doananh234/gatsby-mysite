@@ -1,8 +1,11 @@
 module.exports = {
   defaultTitle: 'doananh234',
+  url: 'https://anhdoan.com',
   logo: 'https://doananh234.com/favicon/logo-48.png',
   author: 'Anh Doan (doananh234)',
-  url: 'https://doananh234.com',
+  title: 'Blog by Anh Doan',
+  subtitle: 'Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.',
+  copyright: '© All rights reserved.',
   legalName: 'Anh Doan',
   defaultDescription:
     "I'm Anh Doan aka doananh234, a self-taught Graphic and full stack developer, interested in the web, neural networks & tech in general.",

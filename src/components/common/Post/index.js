@@ -50,3 +50,5 @@ Post.propTypes = {
   frontmatter: PropTypes.any,
   timeToRead: PropTypes.any,
 };
+
+export default Post;

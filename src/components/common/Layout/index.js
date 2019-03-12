@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { ThemeContext, Provider, Subscribe } from '..';
 import { Header, Footer } from '../../theme';
-import './layout.scss';
-import './main.scss';
+import './layout.css';
+import './main.css';
 
 export const Layout = ({ children }) => (
   <Provider>
@@ -33,3 +33,5 @@ const LayoutStyled = styled.div`
 
   ${({ theme }) => theme === 'dark' && 'background: #212121;'};
 `;
+
+export default Layout;

@@ -16,7 +16,14 @@ if (!process.env.GITHUB_TOKEN) {
 
 module.exports = {
   siteMetadata: {
-    siteUrl: 'https://doananh234.com',
+    siteUrl: config.url,
+    url: config.url,
+    title: config.title,
+    subtitle: config.subtitle,
+    copyright: config.copyright,
+    disqusShortname: config.disqusShortname,
+    menu: config.menu,
+    author: config.author,
     rssMetadata: {
       site_url: 'https://doananh234.com',
       feed_url: `${config.url}${config.siteRss}`,
@@ -29,7 +36,6 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-sass',
     'gatsby-plugin-styled-components',
     'gatsby-plugin-netlify',
     'gatsby-plugin-catch-links',
@@ -71,6 +77,14 @@ module.exports = {
         query: `{
 					site {
 						siteMetadata {
+              siteUrl,
+              url,
+              title,
+              subtitle,
+              copyright,
+              disqusShortname,
+              menu,
+              author,
 							rssMetadata {
 								site_url
 								title
@@ -88,6 +102,7 @@ module.exports = {
               return allMarkdownRemark.edges.map(edge => {
                 return Object.assign({}, edge.node.frontmatter, {
                   description: edge.node.excerpt,
+                  date: edge.node.frontmatter.date,
                   url: site.siteMetadata.rssMetadata.site_url + edge.node.frontmatter.path,
                   guid: site.siteMetadata.rssMetadata.site_url + edge.node.frontmatter.path,
                   custom_elements: [{ 'content:encoded': edge.node.html }],
@@ -97,16 +112,23 @@ module.exports = {
             query: `{
 							allMarkdownRemark(
 								limit: 1000,
-								sort: { order: DESC, fields: [frontmatter___date] }
-							) {
+								sort: { order: DESC, fields: [frontmatter___date] },
+                filter: { frontmatter: { template: { eq: "post" }, draft: { ne: true } } }
+              ) {
 								edges {
 									node {
 										excerpt
 										html
+                    fields {
+                      slug
+                    }
 										frontmatter {
-											title
-											path
-											date
+                      title
+                      date
+                      path
+                      template
+                      draft
+                      description
 										}
 									}
 								}
@@ -133,6 +155,13 @@ module.exports = {
     },
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
+    'gatsby-plugin-netlify',
+    {
+      resolve: 'gatsby-plugin-netlify-cms',
+      options: {
+        modulePath: `${__dirname}/src/cms/cms.js`,
+      },
+    },
     {
       resolve: 'gatsby-transformer-remark',
       options: {
@@ -187,6 +216,37 @@ module.exports = {
           yandex: false,
           windows: false,
         },
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-sitemap',
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                url
+              }
+            }
+            allSitePage(
+              filter: {
+                path: { regex: "/^(?!/404/|/404.html|/dev-404-page/)/" }
+              }
+            ) {
+              edges {
+                node {
+                  path
+                }
+              }
+            }
+          }
+        `,
+        output: '/sitemap.xml',
+        serialize: ({ site, allSitePage }) => allSitePage.edges.map(edge => ({
+            url: site.siteMetadata.url + edge.node.path,
+            changefreq: 'daily',
+            priority: 0.7,
+          })),
       },
     },
     {

@@ -3,23 +3,25 @@ import { graphql } from 'gatsby';
 import {
  Layout, SmallerContainer, SEO, Post,
 } from '../components/common';
-import './highlight.scss';
+import { Highlight } from './highlight';
 
 const Template = ({ data: { post } }) => (
-  <Layout>
-    <SmallerContainer>
-      <SEO
-        type="NewsArticle"
-        title={post.frontmatter.title}
-        articleBody={post.html}
-        datePublished={post.frontmatter.date}
-        dateModified={post.frontmatter.edited ? post.frontmatter.edited : post.frontmatter.date}
-        cover={post.frontmatter.thumbnail.childImageSharp.fluid.originalImg}
-        location={post.frontmatter.path}
-      />
-      <Post {...post} />
-    </SmallerContainer>
-  </Layout>
+  <Highlight>
+    <Layout>
+      <SmallerContainer>
+        <SEO
+          type="NewsArticle"
+          title={post.frontmatter.title}
+          articleBody={post.html}
+          datePublished={post.frontmatter.date}
+          dateModified={post.frontmatter.edited ? post.frontmatter.edited : post.frontmatter.date}
+          cover={post.frontmatter.thumbnail.childImageSharp.fluid.originalImg}
+          location={post.frontmatter.path}
+        />
+        <Post {...post} />
+      </SmallerContainer>
+    </Layout>
+  </Highlight>
 );
 
 export const postQuery = graphql`
