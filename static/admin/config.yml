@@ -4,11 +4,11 @@ backend:
 
 media_folder: 'static/media'
 public_folder: '/media'
-media_library:
-  name: cloudinary
-  config:
-    cloud_name: 'csmenouvo'
-    api_key: '549872286121994'
+# media_library:
+#   name: cloudinary
+#   config:
+#     cloud_name: 'csmenouvo'
+#     api_key: '549872286121994'
 
 collections:
   - name: 'posts'
@@ -26,7 +26,6 @@ collections:
       - { label: 'Thumbnail', name: 'thumbnail', widget: 'image' }
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Slug', name: 'slug', widget: 'string' }
-      - { label: 'Path', name: 'path', widget: 'string' }
       - { label: 'Next Page', name: 'next', widget: 'string' }
       - { label: 'Draft', name: 'draft', widget: 'boolean', default: true }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
