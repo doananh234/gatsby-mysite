@@ -15,6 +15,9 @@ const Blog = () => (
               excerpt(pruneLength: 230)
               id
               timeToRead
+              fields {
+                slug
+              }
               frontmatter {
                 title
                 date(formatString: "MMM DD, YYYY")

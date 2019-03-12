@@ -73,7 +73,7 @@
   "main": "n/a",
   "scripts": {
     "start": "gatsby develop",
-    "build": "yarn run clean && gatsby build",
+    "build": "gatsby build",
     "deploy": "yarn run clean && gatsby build --prefix-paths && gh-pages -d public",
     "reset": "rm -rf cache/ public/",
     "lint": "eslint src",

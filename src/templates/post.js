@@ -33,6 +33,7 @@ export const postQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         edited(formatString: "MMMM DD, YYYY")
         path
+        slug
         title
         next
         id

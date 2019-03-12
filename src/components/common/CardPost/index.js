@@ -18,7 +18,7 @@ const CardPost = ({ node }) => (
   <ThemeContext.Consumer>
     {({ theme }) => (
       <Item>
-        <Post onClick={() => navigate(node.frontmatter.path)} theme={theme}>
+        <Post onClick={() => navigate(node.fields.slug)} theme={theme}>
           <ArticleImg>
             <Img fluid={node.frontmatter.thumbnail.childImageSharp.fluid} />
           </ArticleImg>

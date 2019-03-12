@@ -101,8 +101,8 @@ module.exports = {
                 return Object.assign({}, edge.node.frontmatter, {
                   description: edge.node.excerpt,
                   date: edge.node.frontmatter.date,
-                  url: site.siteMetadata.rssMetadata.site_url + edge.node.frontmatter.path,
-                  guid: site.siteMetadata.rssMetadata.site_url + edge.node.frontmatter.path,
+                  url: site.siteMetadata.rssMetadata.site_url + edge.node.fields.slug,
+                  guid: site.siteMetadata.rssMetadata.site_url + edge.node.fields.slug,
                   custom_elements: [{ 'content:encoded': edge.node.html }],
                 });
               });
@@ -123,7 +123,6 @@ module.exports = {
 										frontmatter {
                       title
                       date
-                      path
                       template
                       draft
                       description
