@@ -2,7 +2,7 @@
   "name": "doananh234.com",
   "description": "My personal website",
   "version": "1.0.0",
-  "author": "Anh Doan <ismai23l@hotmail.com>",
+  "author": "Anh Doan <doananh234@gmail.com>",
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.0",
     "core-js": "^2.6.1",
@@ -41,6 +41,7 @@
     "global": "^4.3.2",
     "i18next": "^13.1.1",
     "i18next-browser-languagedetector": "^2.2.4",
+    "i18next-xhr-backend": "^1.5.1",
     "node-sass": "^4.9.3",
     "prismjs": "^1.15.0",
     "prop-types": "^15.6.2",

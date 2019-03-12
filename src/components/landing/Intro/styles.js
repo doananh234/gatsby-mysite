@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { palette, key } from 'styled-theme';
 
 export const MagicalButton = styled.a`
-  color: ${palette('text', 0)};
+  color: ${palette('button', 0)};
   text-decoration: none;
   padding: 0.9rem 1.4rem;
   background: ${palette('primary', 0)};

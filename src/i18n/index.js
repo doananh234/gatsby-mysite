@@ -1,8 +1,9 @@
 import i18n from 'i18next';
+import Backend from 'i18next-xhr-backend';
 import LanguageDetector from 'i18next-browser-languagedetector';
 import { reactI18nextModule } from 'react-i18next';
-import localeEn from './locale.en.json';
-import localeVi from './locale.vi.json';
+import localeEn from '../locales/en.json';
+import localeVi from '../locales/vi.json';
 
 // the translations
 const resources = {
@@ -15,6 +16,7 @@ const resources = {
 };
 
 i18n
+  .use(Backend)
   .use(LanguageDetector)
   .use(reactI18nextModule)
   .init({

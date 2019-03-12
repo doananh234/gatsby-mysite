@@ -49,5 +49,8 @@
   "work": {
     "title": "Work",
     "sideProjects": "Side Projects"
+  },
+  "services": {
+    "title": "Services"
   }
 }

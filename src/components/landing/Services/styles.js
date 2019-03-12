@@ -1,24 +1,17 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
+import { key } from 'styled-theme';
 
 export const Wrapper = styled.div`
   margin-bottom: 1.45rem;
-  color: #212121;
   padding: 8rem 0 8rem 0;
   clip-path: polygon(0% 14%, 100% 0, 100% 84%, 0 100%);
-  background: #f9f9f9;
   text-align: center;
-
   @media (max-width: 680px) {
     padding: 12rem 0 14rem 0;
   }
-
-  ${({ theme }) =>
-    theme === 'dark' &&
-    `
-		color: #fff;
-		background: #2b2a2a;
-	`}
-`
+  color: ${theme => key([theme.themeType, 'text', 0])(theme)};
+  background: ${theme => key([theme.themeType, 'background', 1])(theme)};
+`;
 
 export const Grid = styled.div`
   padding: 2rem 0;
@@ -35,4 +28,4 @@ export const Grid = styled.div`
   @media (max-width: 680px) {
     grid-template-columns: 1fr;
   }
-`
+`;

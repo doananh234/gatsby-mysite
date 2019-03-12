@@ -73,8 +73,8 @@ const lightTheme = {
     '#f7f8f9', // 11: today-highlight-bg
   ],
   text: [
-    '#000', // 0: Heading
-    '#595959', // 1: HeadingLight
+    '#212121', // 0: Heading
+    '#545454', // 1: HeadingLight
     '#7f7f7f', // 2: Text
     '#a7a9ae', // 3: TextDark
     '#6a6c6a', // 4: Heading Lighten 22%
@@ -99,8 +99,13 @@ const lightTheme = {
     '#e90', // 5:
   ],
   shadow: ['rgba(10,10,0,0.2)', 'rgba(0,195,255, 0.2)'],
-  button: ['#ffffff'],
-  background: ['#fff'],
+  button: [
+    '#ffffff', // button text
+  ],
+  background: [
+    '#fff', // background content
+    '#f9f9f9',
+  ],
 };
 
 const darkTheme = {
@@ -177,7 +182,7 @@ const darkTheme = {
   ],
   text: [
     '#fff', // 0: Heading
-    '#595959', // 1: HeadingLight
+    '#BABABA', // 1: HeadingLight
     '#7f7f7f', // 2: Text
     '#a7a9ae', // 3: TextDark
     '#6a6c6a', // 4: Heading Lighten 22%
@@ -202,7 +207,10 @@ const darkTheme = {
     '#e90', // 5:
   ],
   shadow: ['rgba(10,10,0,0.2)', 'rgba(0,195,255, 0.2)'],
-  background: ['#2b2a2a'],
+  background: [
+    '#2b2a2a', // background content
+    '#2b2a2a',
+  ],
 };
 
 theme.palette = {

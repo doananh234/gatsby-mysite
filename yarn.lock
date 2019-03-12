@@ -6210,6 +6210,10 @@ i18next-browser-languagedetector@^2.2.4:
   version "2.2.4"
   resolved "https://registry.yarnpkg.com/i18next-browser-languagedetector/-/i18next-browser-languagedetector-2.2.4.tgz#b02412d7ab15d7d74e1b1317d67d8a244b219ee3"
 
+i18next-xhr-backend@^1.5.1:
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/i18next-xhr-backend/-/i18next-xhr-backend-1.5.1.tgz#50282610780c6a696d880dfa7f4ac1d01e8c3ad5"
+
 i18next@^13.1.1:
   version "13.1.1"
   resolved "https://registry.yarnpkg.com/i18next/-/i18next-13.1.1.tgz#2c3adf91884b1d5a6d72ddba4814a678109a95d4"
