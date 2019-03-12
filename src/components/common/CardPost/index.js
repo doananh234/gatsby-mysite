@@ -20,7 +20,7 @@ const CardPost = ({ node }) => (
       <Item>
         <Post onClick={() => navigate(node.fields.slug)} theme={theme}>
           <ArticleImg>
-            <Img fluid={node.frontmatter.thumbnail?.childImageSharp?.fluid} />
+            <Img fluid={node.frontmatter.thumbnail.childImageSharp.fluid} />
           </ArticleImg>
           <ArticleContent>
             <ArticleTitle theme={theme}>{node.frontmatter.title}</ArticleTitle>
