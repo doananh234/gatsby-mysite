@@ -15,22 +15,10 @@ export const MagicalButton = styled.a`
     margin: 0 auto;
     text-align: center;
   }
-
-  &:hover {
-    box-shadow: 1px 1px 1px 1px ${palette('shadow', 1)};
-    transition: 0.5s;
-  }
-
   &:first-child {
     margin-right: 1rem;
     background: ${palette('grayscale', 6)};
     color: ${palette('primary', 0)};
-    box-shadow: 1px 1px 1px 0 ${palette('shadow', 0)};
-
-    &:hover {
-      box-shadow: 1px 1px 1px 0 ${palette('shadow', 0)};
-    }
-
     @media (max-width: 380px) {
       margin: 0 auto 1.5rem auto;
     }

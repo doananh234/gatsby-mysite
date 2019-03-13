@@ -11,7 +11,7 @@ const CardBody = ({ title, image }) => (
 
 CardBody.propTypes = {
   title: PropTypes.string,
-  image: PropTypes.string,
+  image: PropTypes.any,
 };
 
 const Wrapper = styled.div`

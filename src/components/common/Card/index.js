@@ -23,9 +23,9 @@ export const Card = ({
 );
 
 Card.propTypes = {
-  id: PropTypes.string,
+  id: PropTypes.any,
   link: PropTypes.string,
   title: PropTypes.string,
-  image: PropTypes.string,
+  image: PropTypes.any,
   description: PropTypes.string,
 };

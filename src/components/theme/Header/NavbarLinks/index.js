@@ -15,6 +15,9 @@ const NavbarLinks = ({ desktop }) => (
         <Link to="/about" activeClassName="current">
           About
         </Link>
+        <Link to="/project" activeClassName="current">
+          Project
+        </Link>
         <Link to="/blog" activeClassName="current">
           Blog
         </Link>

@@ -16,7 +16,7 @@ const SocialIcon = ({
 SocialIcon.propTypes = {
   name: PropTypes.string,
   link: PropTypes.string,
-  icon: PropTypes.string,
+  icon: PropTypes.any,
   theme: PropTypes.any,
 };
 

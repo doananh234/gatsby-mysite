@@ -111,7 +111,6 @@ module.exports = {
 							allMarkdownRemark(
 								limit: 1000,
 								sort: { order: DESC, fields: [frontmatter___date] },
-                filter: { frontmatter: { template: { eq: "post" }, draft: { ne: true } } }
               ) {
 								edges {
 									node {
@@ -122,17 +121,11 @@ module.exports = {
                     }
 										frontmatter {
                       title
-                      date
+                      date(formatString: "MMMM DD, YYYY")
                       template
                       draft
                       description
-                      thumbnail {
-                        childImageSharp {
-                          fluid(maxWidth: 700) {
-                            originalImg
-                          }
-                        }
-                      }
+                      thumbnail
 										}
 									}
 								}
@@ -148,6 +141,13 @@ module.exports = {
       options: {
         path: `${__dirname}/content`,
         name: 'posts',
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/content`,
+        name: 'projects',
       },
     },
     {

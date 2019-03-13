@@ -12,7 +12,7 @@ export const Layout = ({ children }) => (
       {({ theme }) => (
         <div>
           <Header />
-          <LayoutStyled theme={theme}>
+          <LayoutStyled themeType={theme}>
             {children}
             <Subscribe />
           </LayoutStyled>
@@ -31,7 +31,7 @@ const LayoutStyled = styled.div`
   width: 100%;
   padding-top: 7rem;
 
-  ${({ theme }) => theme === 'dark' && 'background: #212121;'};
+  ${({ theme, themeType }) => themeType === 'dark' && 'background: #212121;'};
 `;
 
 export default Layout;

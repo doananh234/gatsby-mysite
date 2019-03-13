@@ -42,6 +42,6 @@ export const Repository = ({
 );
 
 Repository.propTypes = {
-  id: PropTypes.string,
+  id: PropTypes.any,
   node: PropTypes.any,
 };

@@ -33,7 +33,12 @@ const Wrapper = ({
                 name="email"
                 error={errors.email}
               />
-              <CustomButton type="submit" subscribe disabled={isSubmitting}>
+              <CustomButton
+                type="submit"
+                className="background-gradient"
+                subscribe
+                disabled={isSubmitting}
+              >
                 Subscribe
               </CustomButton>
             </Fields>

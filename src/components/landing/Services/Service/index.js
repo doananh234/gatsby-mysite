@@ -16,7 +16,7 @@ const ServiceItem = ({
 
 ServiceItem.propTypes = {
   theme: PropTypes.object,
-  icon: PropTypes.string,
+  icon: PropTypes.any,
   title: PropTypes.string,
   description: PropTypes.string,
 };

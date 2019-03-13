@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { navigate } from 'gatsby';
-import Img from 'gatsby-image';
 import { ThemeContext } from '..';
 import {
   Item,
@@ -21,9 +20,7 @@ const CardPost = ({ node }) => {
         <Item>
           <Post onClick={() => navigate(node.fields.slug)} theme={theme}>
             <ArticleImg>
-              {node.frontmatter.thumbnail && (
-                <Img fluid={node.frontmatter.thumbnail.childImageSharp.fluid} />
-              )}
+              <img alt={node.frontmatter.thumbnail} src={node.frontmatter.thumbnail} />
             </ArticleImg>
             <ArticleContent>
               <ArticleTitle theme={theme}>{node.frontmatter.title}</ArticleTitle>

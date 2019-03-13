@@ -40,20 +40,11 @@ const createPages = async({ graphql, actions }) => {
             }
             frontmatter {
               date(formatString: "MMMM DD, YYYY")
-              edited(formatString: "MMMM DD, YYYY")
-              path
               slug
               title
               next
-              id
               template
-              thumbnail {
-                childImageSharp {
-                  fluid(maxWidth: 700) {
-                    originalImg
-                  }
-                }
-              }
+              thumbnail
             }
           }
         }
@@ -64,19 +55,37 @@ const createPages = async({ graphql, actions }) => {
   const { edges } = result.data.allMarkdownRemark;
 
   _.each(edges, edge => {
-    if (_.get(edge, 'node.frontmatter.template') === 'page') {
-      createPage({
-        path: edge.node.fields.slug,
-        component: path.resolve('./src/templates/page-template.js'),
-        context: { slug: edge.node.fields.slug },
-      });
-    } else if (_.get(edge, 'node.frontmatter.template') === 'post') {
-      createPage({
-        path: edge.node.fields.slug,
-        component: path.resolve('./src/templates/post-template.js'),
-        context: { slug: edge.node.fields.slug },
-      });
+    let page = {};
+    switch (_.get(edge, 'node.frontmatter.template')) {
+      case 'post':
+        page = {
+          path: edge.node.fields.slug,
+          component: path.resolve('./src/templates/post-template.js'),
+          context: { slug: edge.node.fields.slug },
+        };
+        break;
+      case 'project':
+        page = {
+          path: edge.node.fields.slug,
+          component: path.resolve('./src/templates/project-template.js'),
+          context: { slug: edge.node.fields.slug },
+        };
+        break;
+      case 'page':
+        page = {
+          path: edge.node.fields.slug,
+          component: path.resolve('./src/templates/page-template.js'),
+          context: { slug: edge.node.fields.slug },
+        };
+        break;
+      default:
+        page = {
+          path: edge.node.fields.slug,
+          component: path.resolve('./src/templates/page-template.js'),
+          context: { slug: edge.node.fields.slug },
+        };
     }
+    createPage(page);
   });
 
   // Feeds

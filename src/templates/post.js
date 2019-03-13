@@ -14,34 +14,27 @@ const Template = ({ data: { post } }) => (
           title={post.frontmatter.title}
           articleBody={post.html}
           datePublished={post.frontmatter.date}
-          dateModified={post.frontmatter.edited ? post.frontmatter.edited : post.frontmatter.date}
+          dateModified={post.frontmatter.date}
           cover={post.frontmatter.thumbnail.childImageSharp.fluid.originalImg}
           location={post.frontmatter.path}
         />
-        <Post {...post} />
+        <Post post={data.markdownRemark} />
       </SmallerContainer>
     </Layout>
   </Highlight>
 );
 
 export const postQuery = graphql`
-  query($path: String!) {
-    post: markdownRemark(frontmatter: { path: { eq: $path } }) {
+  query($slug: String!) {
+    post: markdownRemark(frontmatter: { slug: { eq: $slug } }) {
       html
       timeToRead
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
-        edited(formatString: "MMMM DD, YYYY")
-        path
         slug
         title
         next
-        id
-        thumbnail {
-          childImageSharp {
-            ...imageFields
-          }
-        }
+        thumbnail
       }
     }
   }

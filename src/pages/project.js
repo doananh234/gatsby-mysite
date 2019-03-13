@@ -5,19 +5,18 @@ import {
  Layout, Container, SEO, PageTitle, CardPost,
 } from '../components/common';
 
-const Blog = () => (
+const Project = () => (
   <StaticQuery
     query={graphql`
-      query BlogQuery {
+      query ProjectQuery {
         allMarkdownRemark(
-          filter: { frontmatter: { template: { eq: "post" }, draft: { ne: true } } }
+          filter: { frontmatter: { template: { eq: "project" }, draft: { ne: true } } }
           sort: { order: DESC, fields: [frontmatter___date] }
           limit: 20
         ) {
           edges {
             node {
               excerpt(pruneLength: 230)
-              timeToRead
               fields {
                 slug
               }
@@ -35,7 +34,7 @@ const Blog = () => (
     render={data => (
       <Layout>
         <Container>
-          <SEO title="Blog" type="Organization" location="/blog" />
+          <SEO title="Project" type="Organization" location="/project" />
           <PageTitle>Articles</PageTitle>
           <Row>
             {data.allMarkdownRemark.edges.map(post => (
@@ -65,4 +64,4 @@ const Row = styled.div`
   }
 `;
 
-export default Blog;
+export default Project;

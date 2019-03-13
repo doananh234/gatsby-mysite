@@ -5,7 +5,7 @@ import { StyledTitle } from './styles';
 
 export const PageTitle = ({ children }) => (
   <ThemeContext.Consumer>
-    {({ theme }) => <StyledTitle theme={theme}>{children}</StyledTitle>}
+    {({ theme }) => <StyledTitle themeType={theme}>{children}</StyledTitle>}
   </ThemeContext.Consumer>
 );
 

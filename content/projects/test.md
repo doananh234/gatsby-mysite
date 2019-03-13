@@ -1,7 +1,7 @@
 ---
-template: post
+template: project
 thumbnail: https://www.w3schools.com/w3css/img_lights.jpg
-title: test
+title: GoEat
 slug: /post/test/
 next: /post/test/
 draft: false
@@ -13,4 +13,4 @@ tags:
   - UI
 ---
 
-test
+GoEat

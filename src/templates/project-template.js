@@ -17,7 +17,7 @@ const PostTemplate = ({ data }) => {
 };
 
 export const query = graphql`
-  query PostBySlug($slug: String!) {
+  query ProjectBySlug($slug: String!) {
     site {
       siteMetadata {
         author

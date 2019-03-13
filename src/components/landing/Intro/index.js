@@ -13,10 +13,15 @@ const IntroUI = ({ t }) => {
           <h1>{t('intro.title')}</h1>
           <p>{t('intro.description')}</p>
           <Flex>
-            <MagicalButton href={t('intro.link.cv')} rel="noopener noreferrer" target="_blank">
+            <MagicalButton
+              className="shadow-light"
+              href={t('intro.link.cv')}
+              rel="noopener noreferrer"
+              target="_blank"
+            >
               {t('intro.button.viewResume')}
             </MagicalButton>
-            <MagicalButton as={Link} to="/contact">
+            <MagicalButton className="shadow-light" as={Link} to="/contact">
               {t('intro.button.getInTouch')}
             </MagicalButton>
           </Flex>
