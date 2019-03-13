@@ -34,7 +34,7 @@ collections:
       - { label: 'Body', name: 'body', widget: 'markdown' }
       - { label: 'Tags', name: 'tags', widget: 'list' }
 
-- name: 'projects'
+  - name: 'projects'
     label: 'Projects'
     folder: 'content/projects'
     create: true
@@ -56,7 +56,7 @@ collections:
       - { label: 'Category', name: 'category', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
       - { label: 'Tags', name: 'tags', widget: 'list' }
-      
+
   - name: 'pages'
     label: 'Pages'
     folder: 'content/pages'
