@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import theme from '../../../config/theme';
 
 export const Wrapper = styled.div`
   padding: 2rem 0;
@@ -10,7 +11,7 @@ export const Wrapper = styled.div`
 
 export const Title = styled.h2`
   margin-bottom: 3rem;
-  ${({ theme }) => theme === 'dark' && 'color: #fff;'}
+  color: ${({ themeType }) => theme[themeType].text[0]};
 `;
 
 export const Social = styled.div`

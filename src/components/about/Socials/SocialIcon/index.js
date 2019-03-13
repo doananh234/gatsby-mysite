@@ -5,7 +5,7 @@ import { Social } from './styles';
 const SocialIcon = ({
  name, link, icon, theme,
 }) => (
-  <Social theme={theme}>
+  <Social themeType={theme}>
     <a href={link} rel="noopener noreferrer" target="_blank">
       <img src={icon} alt={name} />
       {name}

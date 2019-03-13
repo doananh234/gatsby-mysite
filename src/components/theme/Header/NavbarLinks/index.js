@@ -8,7 +8,7 @@ import { Links, StyledButton } from './styles';
 const NavbarLinks = ({ desktop }) => (
   <ThemeContext.Consumer>
     {({ theme, toggleTheme }) => (
-      <Links desktop={desktop} theme={theme}>
+      <Links desktop={desktop} themeType={theme}>
         <Link to="/" activeClassName="current">
           Home
         </Link>

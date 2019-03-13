@@ -6,7 +6,7 @@ import { ThemeContext } from '../..';
 const CardHeader = ({ title }) => (
   <ThemeContext.Consumer>
     {({ theme }) => (
-      <Wrapper theme={theme}>
+      <Wrapper themeType={theme}>
         <h3>{title}</h3>
       </Wrapper>
     )}
@@ -24,13 +24,11 @@ const Wrapper = styled.div`
     font-size: 0.9em;
     margin: 0;
     font-weight: normal;
-    color: #212121;
 
     @media (max-width: 680px) {
       font-size: 1.2em;
     }
-
-    ${({ theme }) => theme === 'dark' && 'color: #fff;'};
+    color: ${({ theme, themeType }) => theme[themeType].text[0]};
   }
 `;
 

@@ -1,23 +1,19 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
+import theme from '../../../../config/theme';
 
 export const Links = styled.div`
-    a {
-        color: #6d6d6d;
-        text-decoration: none;
+  a {
+    color: ${({ themeType }) => theme[themeType].text[5]};
+    text-decoration: none;
 
-        &.current {
-            color: #212121;
-        }
-
-        ${({ theme }) => theme === 'dark' && `
-            color: #fff;
-            &.current {
-                color: #929090;
-            }
-        `}
+    &.current {
+      font-weight: bold;
+      color: ${({ themeType }) => theme[themeType].text[0]};
     }
+  }
 
-    ${({ desktop }) => (desktop ? `
+  ${({ desktop }) => desktop
+      ? `
         @media (max-width: 960px) {
             display: none;
         }
@@ -29,7 +25,8 @@ export const Links = styled.div`
                 margin-right: unset;
             }
         }
-    ` : `
+    `
+      : `
         padding: 3rem;
         display: flex;
         flex-direction: column;
@@ -41,18 +38,18 @@ export const Links = styled.div`
                 margin-bottom: unset;
             }
         }
-    `)}
-`
+    `}
+`;
 
 export const StyledButton = styled.button`
-    cursor: pointer;
-    border: none;
-    position: relative;
-    top: .3rem;
-    background: none;
-    text-align: left;
+  cursor: pointer;
+  border: none;
+  position: relative;
+  top: 0.3rem;
+  background: none;
+  text-align: left;
 
-    img {
-        margin: 0;
-    }
-`
+  img {
+    margin: 0;
+  }
+`;

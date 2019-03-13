@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import theme from '../../../config/theme';
 
 export const Item = styled.div`
   max-width: 32%;
@@ -18,7 +19,6 @@ export const Item = styled.div`
 
 export const Post = styled.div`
   border-radius: 20px;
-  background: #fff;
   cursor: pointer;
   transition: 0.7s;
   height: 100%;
@@ -34,11 +34,7 @@ export const Post = styled.div`
     box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.2);
     transition: 0.7s;
   }
-
-  ${({ theme }) => theme === 'dark'
-    && `
-background: #2b2a2a;
-`};
+  background: ${({ themeType }) => theme[themeType].background.content};
 `;
 
 export const ArticleContent = styled.div`
@@ -55,6 +51,7 @@ export const ArticleImg = styled.div`
   img {
     object-fit: cover;
     height: 100%;
+    width: 100%;
     box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.2);
   }
   .gatsby-image-wrapper {
@@ -73,7 +70,6 @@ export const ArticleImg = styled.div`
 `;
 
 export const ArticleTitle = styled.h2`
-  color: #212121;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -82,15 +78,10 @@ export const ArticleTitle = styled.h2`
     margin-bottom: 0.1rem;
     font-size: 12pt;
   }
-
-  ${({ theme }) => theme === 'dark'
-    && `
-			color: #fff;
-	`};
+  color: ${({ themeType }) => theme[themeType].text[0]};
 `;
 
 export const Paragraph = styled.p`
-  color: #616161;
   height: 150px;
   overflow-y: hidden;
 
@@ -100,25 +91,16 @@ export const Paragraph = styled.p`
     margin-bottom: 0.1rem;
     font-size: 10pt;
   }
-
-  ${({ theme }) => theme === 'dark'
-    && `
-			color: #fff;
-	`};
+  color: ${({ themeType }) => theme[themeType].text[4]};
 `;
 
 export const Info = styled.i`
-  color: #212121;
   font-size: 0.8em;
 
   @media (max-width: 680px) {
     font-size: 0.6em;
   }
-
-  ${({ theme }) => theme === 'dark'
-    && `
-			color: #fff;
-	`};
+  color: ${({ themeType }) => theme[themeType].text[0]};
 `;
 
 export const StyledSpan = styled.span`

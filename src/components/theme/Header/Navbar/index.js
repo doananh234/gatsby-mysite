@@ -8,7 +8,7 @@ const Navbar = () => (
   <ThemeContext.Consumer>
     {({ theme }) => (
       <Wrapper as={Container}>
-        <Brand as={Link} theme={theme} to="/">
+        <Brand as={Link} themeType={theme} to="/">
           <BrandLogo as={Logo} color={theme === 'dark' ? '#fff' : '#212121'} strokeWidth="2" />
           doananh234
         </Brand>

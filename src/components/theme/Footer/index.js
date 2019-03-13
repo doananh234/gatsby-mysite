@@ -63,7 +63,7 @@ export const Footer = () => {
   return (
     <ThemeContext.Consumer>
       {({ theme }) => (
-        <FooterContainer theme={theme}>
+        <FooterContainer themeType={theme}>
           <FullContainer className="background-gradient">
             <Wrapper as={Container}>
               <List>

@@ -7,7 +7,7 @@ const Feed = ({ edges }) => (
   <FeedWrapper>
     <div className="feed">
       {edges.map(edge => (
-        <div className="feed__item" key={edge.node.fields.slug}>
+        <div className="feed__item shadow-light" key={edge.node.fields.slug}>
           <div className="feed__item-meta">
             <time
               className="feed__item-meta-time"

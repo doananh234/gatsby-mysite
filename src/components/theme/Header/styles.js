@@ -1,34 +1,27 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
+import theme from '../../../config/theme';
 
 export const StyledHeader = styled.div`
-	background: #fff;
-	width: 100%;
-	z-index: 1;
-	border-bottom: .01em solid rgb(204, 204, 204);
-	margin-bottom: -3rem;
+  width: 100%;
+  z-index: 1;
+  position: fixed;
+  margin-bottom: unset;
+  background: ${({ themeType }) => theme[themeType].background.content};
 
-	${({ isHomePage }) => isHomePage && `
-		position: fixed;
-		margin-bottom: unset;
-	`}
-
-	${({ theme }) => theme === 'dark' && `
-		background: #212121;
-		border-bottom: unset;
-		box-shadow: 2px 0 20px 0 rgba(0, 0, 0, 0.2);
-	`}
-`
+  box-shadow: 0px 2px 20px 0 ${({ themeType }) => theme[themeType].shadow[1]};
+`;
 
 export const Overlay = styled.div`
-	position: fixed;
-	background: rgba(0, 0, 0, .7);
-	width: 100%;
-	height: 100%;
-	display: none;
-	transition: .4s;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  display: none;
+  transition: 0.4s;
 
-	${({ sidebar }) => sidebar && `
-		display: block;
-		z-index: 4;	
-	`}
-`
+  ${({ sidebar }) => sidebar
+    && `
+display: block;
+z-index: 4;
+`}
+`;

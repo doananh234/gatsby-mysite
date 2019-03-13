@@ -1,9 +1,8 @@
 import styled from 'styled-components';
+import theme from '../../../config/theme';
 
 export const Title = styled.h4`
-  color: #212121;
-
-  ${({ theme }) => theme === 'dark' && 'color: #fff;'};
+  color: ${({ themeType }) => theme[themeType].text[0]};
 `;
 
 export const Wrapper = styled.div`

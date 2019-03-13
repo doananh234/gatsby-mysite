@@ -96,16 +96,16 @@ const Socials = () => (
         },
       ];
       return (
-        <Wrapper>
-          <Title theme={theme}>Or somewhere else on the web</Title>
+        <Wrapper themeType={theme}>
+          <Title themeType={theme}>Or somewhere else on the web</Title>
           <Social>
             {socials.map(social => (
-              <SocialIcon theme={theme} key={social.id} {...social} />
+              <SocialIcon themeType={theme} key={social.id} {...social} />
             ))}
           </Social>
           <Social>
             {creatives.map(creative => (
-              <SocialIcon theme={theme} key={creative.id} {...creative} />
+              <SocialIcon themeType={theme} key={creative.id} {...creative} />
             ))}
           </Social>
         </Wrapper>

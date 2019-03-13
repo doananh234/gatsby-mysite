@@ -17,14 +17,14 @@ const ContactForm = ({
   <ThemeContext.Consumer>
     {({ theme }) => (
       <ContactWrapper as={SmallerContainer}>
-        <Text theme={theme}>
+        <Text themeType={theme}>
           Feel free to email me via
           {' '}
           <a href="mailto:ismai23l@hotmail.com" target="_top">
             ismai23l@hotmail.com
           </a>
         </Text>
-        <Text as="p" theme={theme}>
+        <Text as="p" themeType={theme}>
           Or fill in the contact form down below
         </Text>
         <Form
@@ -37,7 +37,7 @@ const ContactForm = ({
           <noscript>
             <p>This form won’t work with Javascript disabled</p>
           </noscript>
-          <Wrapper theme={theme}>
+          <Wrapper themeType={theme}>
             <label htmlFor="name" aria-label="please insert your name">
               Full name:
               <InputField
@@ -50,7 +50,7 @@ const ContactForm = ({
             </label>
             <ErrorMessage component={Error} name="name" />
           </Wrapper>
-          <Wrapper theme={theme}>
+          <Wrapper themeType={theme}>
             <label htmlFor="email" aria-label="please insert your email">
               Your email:
               <InputField
@@ -63,7 +63,7 @@ const ContactForm = ({
             </label>
             <ErrorMessage component={Error} name="email" />
           </Wrapper>
-          <Wrapper theme={theme}>
+          <Wrapper themeType={theme}>
             <label htmlFor="message" aria-label="please insert your message">
               Message:
               <InputField

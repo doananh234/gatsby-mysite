@@ -24,7 +24,7 @@ const Post = ({ post }) => {
         return (
           <PostWrapper themeType={theme}>
             <ArticleWrapper themeType={theme}>
-              <PageTitle>{title}</PageTitle>
+              <PageTitle themeType={theme}>{title}</PageTitle>
               <ArticleDate>
                 <i>{`${date} - ${timeToRead || 1} min read`}</i>
               </ArticleDate>

@@ -6,7 +6,7 @@ import { ThemeContext } from '../..';
 const CardFooter = ({ description }) => (
   <ThemeContext.Consumer>
     {({ theme }) => (
-      <Wrapper theme={theme}>
+      <Wrapper themeType={theme}>
         <p>{description}</p>
       </Wrapper>
     )}
@@ -24,9 +24,7 @@ const Wrapper = styled.div`
     font-size: 16px;
     line-height: 1.46429em;
     margin-bottom: 1rem;
-    color: #212121;
-
-    ${({ theme }) => theme === 'dark' && 'color: #fff;'};
+    color: ${({ theme, themeType }) => theme[themeType].text[0]};
   }
 `;
 

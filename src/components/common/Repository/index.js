@@ -21,15 +21,15 @@ export const Repository = ({
 }) => (
   <ThemeContext.Consumer>
     {({ theme }) => (
-      <Wrapper id={id} as="a" href={url}>
-        <StyledRepository theme={theme}>
-          <Header theme={theme}>
+      <Wrapper className="shadow-super-light" id={id} as="a" href={url}>
+        <StyledRepository themeType={theme}>
+          <Header themeType={theme}>
             <h3>{name}</h3>
           </Header>
-          <Description theme={theme}>
+          <Description themeType={theme}>
             <p>{description}</p>
           </Description>
-          <Stars theme={theme}>
+          <Stars themeType={theme}>
             <img src={theme === 'dark' ? StarIconWhite : StarIcon} alt="stars" />
             {totalCount}
             <img src={theme === 'dark' ? ForkIconWhite : ForkIcon} alt="forks" />

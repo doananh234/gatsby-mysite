@@ -12,7 +12,7 @@ export const Card = ({
   <ThemeContext.Consumer>
     {({ theme }) => (
       <Wrapper id={id} as="a" href={link}>
-        <StyledCard theme={theme}>
+        <StyledCard className="shadow-super-light" themeType={theme}>
           <CardHeader title={title} />
           <CardBody image={image} title={title} />
           <CardFooter description={description} />

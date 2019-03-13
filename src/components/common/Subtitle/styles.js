@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import theme from '../../../config/theme';
 
 export const StyledSubtitle = styled.h2`
   margin-bottom: 2rem;
@@ -9,9 +10,5 @@ export const StyledSubtitle = styled.h2`
 opacity: .3;
 transition: .3s;
 `};
-
-  ${({ theme }) => theme === 'dark'
-    && `
-color: #fff;
-`};
+  color: ${({ themeType }) => theme[themeType].text[0]};
 `;

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import theme from '../../../config/theme';
 
 export const StyledTitle = styled.h1`
   margin-bottom: 2rem;
@@ -6,6 +7,5 @@ export const StyledTitle = styled.h1`
   font-weight: 800;
   @media (max-width: 960px) {
   }
-
-  ${({ theme }) => theme === 'dark' && 'color: #fff;'};
+  color: ${({ themeType }) => theme[themeType].text[0]};
 `;

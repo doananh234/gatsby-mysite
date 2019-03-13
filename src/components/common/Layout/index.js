@@ -4,20 +4,20 @@ import styled from 'styled-components';
 import { ThemeContext, Provider, Subscribe } from '..';
 import { Header, Footer } from '../../theme';
 import './layout.css';
-import './main.css';
+import { MainWrapper } from './main';
 
 export const Layout = ({ children }) => (
   <Provider>
     <ThemeContext.Consumer>
       {({ theme }) => (
-        <div>
+        <MainWrapper themeType={theme}>
           <Header />
           <LayoutStyled themeType={theme}>
             {children}
             <Subscribe />
           </LayoutStyled>
           <Footer />
-        </div>
+        </MainWrapper>
       )}
     </ThemeContext.Consumer>
   </Provider>

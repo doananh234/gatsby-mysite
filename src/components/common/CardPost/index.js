@@ -18,14 +18,14 @@ const CardPost = ({ node }) => {
     <ThemeContext.Consumer>
       {({ theme }) => (
         <Item>
-          <Post onClick={() => navigate(node.fields.slug)} theme={theme}>
+          <Post onClick={() => navigate(node.fields.slug)} themeType={theme}>
             <ArticleImg>
               <img alt={node.frontmatter.thumbnail} src={node.frontmatter.thumbnail} />
             </ArticleImg>
             <ArticleContent>
-              <ArticleTitle theme={theme}>{node.frontmatter.title}</ArticleTitle>
-              <Paragraph theme={theme}>{node.excerpt}</Paragraph>
-              <Info theme={theme}>
+              <ArticleTitle themeType={theme}>{node.frontmatter.title}</ArticleTitle>
+              <Paragraph themeType={theme}>{node.excerpt}</Paragraph>
+              <Info themeType={theme}>
                 {node.frontmatter.date}
                 <StyledSpan>
                   {node.timeToRead}

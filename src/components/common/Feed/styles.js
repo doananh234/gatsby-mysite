@@ -2,9 +2,11 @@ import styled from 'styled-components';
 
 export const FeedWrapper = styled.div`
   .feed {
+    padding: 20 0px;
     &__item {
       margin-bottom: 1.25px;
-
+      padding: 20px;
+      border-radius: 20px;
       &:last-child {
         margin-bottom: 0.5px;
       }
@@ -13,7 +15,6 @@ export const FeedWrapper = styled.div`
         line-height: 1.5;
         margin-top: 0px;
         margin-bottom: 0.5px;
-
         &-link {
           &:hover,
           &:focus {

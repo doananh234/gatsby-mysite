@@ -15,14 +15,14 @@ const Details = () => (
   <ThemeContext.Consumer>
     {({ theme }) => (
       <Wrapper as={Container}>
-        <Text theme={theme}>
+        <Text themeType={theme}>
           {`I’m Anh Doan, also known as doananh234, I’m a self-taught Graphic and full stack
           developer. I'm really interested in Technology. Science including mathematics, physics
           science belong to my interests as well, you can know more about me by reading my `}
           <Link to="/blog">articles</Link>
 .
         </Text>
-        <Text theme={theme}>
+        <Text themeType={theme}>
           {"Currently I'm working remotely at "}
           <a href="https://obytes.com/?ref=doananh234" target="_blank" rel="noopener noreferrer">
             Obytes
@@ -30,17 +30,17 @@ const Details = () => (
           {' '}
           as a Front end developer.
         </Text>
-        <Text theme={theme}>For business inquiries feel free to get in touch with me at:</Text>
+        <Text themeType={theme}>For business inquiries feel free to get in touch with me at:</Text>
         <DetailsContainer>
-          <P theme={theme}>
+          <P themeType={theme}>
             <Img src={theme === 'dark' ? EnvelopeWhite : Envelope} alt="email" />
             ismai23l@hotmail.com
           </P>
-          <P theme={theme}>
+          <P themeType={theme}>
             <Img src={theme === 'dark' ? PhoneWhite : Phone} alt="phone" />
             +212 663-532761
           </P>
-          <P theme={theme}>
+          <P themeType={theme}>
             <Img src={theme === 'dark' ? MarkerWhite : Marker} alt="address" />
             Nr 23 Lot El Waha, Errachidia, Morocco
           </P>

@@ -34,7 +34,7 @@ const Project = () => (
     render={data => (
       <Layout>
         <Container>
-          <SEO title="Project" type="Organization" location="/project" />
+          <SEO title="Project" type="Organization" location="/roject" />
           <PageTitle>Articles</PageTitle>
           <Row>
             {data.allMarkdownRemark.edges.map(post => (

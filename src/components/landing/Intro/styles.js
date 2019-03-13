@@ -7,7 +7,6 @@ export const MagicalButton = styled.a`
   padding: 0.9rem 1.4rem;
   background: ${palette('primary', 0)};
   border-radius: 0.3rem;
-  box-shadow: 1px 2px 2px 1px ${palette('shadow', 1)};
   transition: 0.5s;
 
   @media (max-width: 380px) {

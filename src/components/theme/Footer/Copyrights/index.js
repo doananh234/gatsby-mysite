@@ -8,7 +8,7 @@ import { Wrapper, Links, Item } from './styles';
 const Copyrights = () => (
   <ThemeContext.Consumer>
     {({ theme }) => (
-      <Wrapper as={SmallerContainer} theme={theme}>
+      <Wrapper as={SmallerContainer} themeType={theme}>
         <Links>
           ©
           {' '}
@@ -18,28 +18,6 @@ const Copyrights = () => (
           {' '}
           2016-
           {`${new Date().getFullYear()} `}
-          Built with
-          <a href="https://www.gatsbyjs.org" rel="noopener noreferrer" target="_blank">
-            <Item src={gatsbyIcon} img alt="Gatssby js" />
-          </a>
-          Open sourced on
-          <a
-            href="https://github.com/doananh234/doananh234.com"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            <Item
-              as={GithubIcon}
-              img
-              width="24"
-              height="24"
-              color={theme === 'dark' ? '#fff' : '#000'}
-            />
-          </a>
-          and deployed on
-          <a href="https://www.netlify.com" rel="noopener noreferrer" target="_blank">
-            <Item src={netlifyIcon} img alt="Netlify" />
-          </a>
         </Links>
       </Wrapper>
     )}

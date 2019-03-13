@@ -74,10 +74,10 @@ export default {
     '#212121', // 0: Heading
     '#545454', // 1: HeadingLight
     '#7f7f7f', // 2: Text
-    '#a7a9ae', // 3: TextDark
-    '#6a6c6a', // 4: Heading Lighten 22%
+    '#15171a', // 3: TextDark
+    '#616161', // 4: Heading Lighten 22%
     '#a0a2a6', // 5: textLight
-    '#f6f8ff', // 6: text light 80%
+    '#738a94', // 6: text light 80%
     '#262626', // 7: super dark
   ],
   border: [
@@ -96,12 +96,12 @@ export default {
     '#dd4a68', // 4:
     '#e90', // 5:
   ],
-  shadow: ['rgba(10,10,0,0.2)', 'rgba(0,195,255, 0.2)'],
+  shadow: ['rgba(0, 0, 0, 0.15)', 'rgba(20,20,20,0.05)'],
   button: [
     '#ffffff', // button text
   ],
-  background: [
-    '#fff', // background content
-    '#f9f9f9',
-  ],
+  background: {
+    content: '#fff',
+    container: '#f9f9f9',
+  },
 };

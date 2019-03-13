@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import theme from '../../../config/theme';
 
 export const PostWrapper = styled.div`
   .post {
@@ -23,7 +24,6 @@ export const PostWrapper = styled.div`
 `;
 
 export const ArticleWrapper = styled.div`
-  color: #212121;
   a {
     text-decoration: none;
     color: rgb(0, 119, 255);
@@ -37,11 +37,7 @@ export const ArticleWrapper = styled.div`
     font-family: 'Merriweather', serif;
     text-align: center;
   }
-
-  ${({ theme }) => theme === 'dark'
-    && `
-    color: #fff;
-`};
+  color: ${({ themeType }) => theme[themeType].text[0]};
 `;
 
 export const Back = styled.div`

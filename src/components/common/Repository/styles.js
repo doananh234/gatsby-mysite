@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import theme from '../../../config/theme';
 
 export const Wrapper = styled.div`
     height: 100%;
@@ -31,21 +32,14 @@ export const StyledRepository = styled.div`
   height: 100%;
   padding: 1rem 1.5rem;
   border-radius: 2px;
-  background: #fff;
-  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14),
-    0px 3px 1px -2px rgba(0, 0, 0, 0.12);
   transition: 0.3s;
 
   &:hover {
     box-shadow: 0 8px 26px 0 rgba(0, 0, 0, 0.09);
     transition: 0.3s;
   }
-
-  ${({ theme }) => theme === 'dark'
-    && `
-background: #2b2a2a;
-color: #fff;
-`};
+  color: ${({ themeType }) => theme[themeType].text[0]};
+  background: ${({ themeType }) => theme[themeType].background.content};
 `;
 
 export const Header = styled.div`
@@ -55,16 +49,11 @@ export const Header = styled.div`
     font-size: 0.9em;
     margin: 0;
     font-weight: normal;
-    color: #212121;
 
     @media (max-width: 680px) {
       font-size: 1.2em;
     }
-
-    ${({ theme }) => theme === 'dark'
-      && `
-color: #fff;
-`};
+    color: ${({ themeType }) => theme[themeType].text[0]};
   }
 `;
 
@@ -75,12 +64,7 @@ export const Description = styled.div`
     font-size: 16px;
     line-height: 1.46429em;
     margin: 0;
-    color: #212121;
-
-    ${({ theme }) => theme === 'dark'
-      && `
-color: #fff;
-`};
+    color: ${({ themeType }) => theme[themeType].text[0]};
   }
 `;
 
@@ -88,8 +72,6 @@ export const Stars = styled.div`
   padding: 1rem 0;
   display: flex;
   align-items: center;
-  color: #212121;
-
   img {
     margin-right: 0.5rem;
     margin-bottom: 0;
@@ -98,9 +80,5 @@ export const Stars = styled.div`
       margin: 0 0.5rem 0 1rem;
     }
   }
-
-  ${({ theme }) => theme === 'dark'
-    && `
-color: #fff;
-`};
+  color: ${({ themeType }) => theme[themeType].text[0]};
 `;
