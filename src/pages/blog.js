@@ -17,14 +17,12 @@ const Blog = () => (
           edges {
             node {
               excerpt(pruneLength: 230)
-              timeToRead
               fields {
                 slug
               }
               frontmatter {
                 title
                 date(formatString: "MMM DD, YYYY")
-                slug
                 thumbnail
               }
             }

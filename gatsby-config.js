@@ -116,9 +116,6 @@ module.exports = {
 									node {
 										excerpt
 										html
-                    fields {
-                      slug
-                    }
 										frontmatter {
                       title
                       date(formatString: "MMMM DD, YYYY")

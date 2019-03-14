@@ -11,9 +11,7 @@ import { PageTitle } from '../PageTitle';
 import { ThemeContext } from '../ThemeContext';
 
 const Post = ({ post }) => {
-  const {
- html, timeToRead, frontmatter, fields,
-} = post;
+  const { html, frontmatter, fields } = post;
   const { tags, title, date } = frontmatter;
 
   const { tagSlugs } = fields;
@@ -26,7 +24,7 @@ const Post = ({ post }) => {
             <ArticleWrapper themeType={theme}>
               <PageTitle themeType={theme}>{title}</PageTitle>
               <ArticleDate>
-                <i>{`${date} - ${timeToRead || 1} min read`}</i>
+                <i>{`${date}`}</i>
               </ArticleDate>
               <div className="post__content">
                 <Content body={html} />

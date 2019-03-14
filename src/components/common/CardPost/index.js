@@ -3,14 +3,7 @@ import PropTypes from 'prop-types';
 import { navigate } from 'gatsby';
 import { ThemeContext } from '..';
 import {
-  Item,
-  Post,
-  ArticleContent,
-  ArticleImg,
-  ArticleTitle,
-  Paragraph,
-  Info,
-  StyledSpan,
+ Item, Post, ArticleContent, ArticleImg, ArticleTitle, Paragraph, Info,
 } from './styles';
 
 const CardPost = ({ node }) => {
@@ -25,14 +18,7 @@ const CardPost = ({ node }) => {
             <ArticleContent>
               <ArticleTitle themeType={theme}>{node.frontmatter.title}</ArticleTitle>
               <Paragraph themeType={theme}>{node.excerpt}</Paragraph>
-              <Info themeType={theme}>
-                {node.frontmatter.date}
-                <StyledSpan>
-                  {node.timeToRead}
-                  {' '}
-min
-                </StyledSpan>
-              </Info>
+              <Info themeType={theme}>{node.frontmatter.date}</Info>
             </ArticleContent>
           </Post>
         </Item>

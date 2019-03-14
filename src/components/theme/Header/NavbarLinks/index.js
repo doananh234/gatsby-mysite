@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import night from '../../../../../static/icons/night.svg';
 import day from '../../../../../static/icons/day.svg';
@@ -12,16 +13,16 @@ const NavbarLinks = ({ desktop }) => (
         <Link to="/" activeClassName="current">
           Home
         </Link>
-        <Link to="/about" activeClassName="current">
+        <Link to="/about/" activeClassName="current">
           About
         </Link>
-        <Link to="/project" activeClassName="current">
+        <Link to="/project/" activeClassName="current">
           Project
         </Link>
-        <Link to="/blog" activeClassName="current">
+        <Link to="/blog/" activeClassName="current">
           Blog
         </Link>
-        <Link to="/contact" activeClassName="current">
+        <Link to="/contact/" activeClassName="current">
           Contact
         </Link>
         <StyledButton type="button" onClick={toggleTheme}>
@@ -31,5 +32,9 @@ const NavbarLinks = ({ desktop }) => (
     )}
   </ThemeContext.Consumer>
 );
+
+NavbarLinks.propTypes = {
+  desktop: PropTypes.any,
+};
 
 export default NavbarLinks;

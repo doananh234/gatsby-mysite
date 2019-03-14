@@ -5,7 +5,11 @@ import { ContentWrapper } from './styles';
 const Content = ({ body }) => (
   <ContentWrapper>
     <div className="content">
-      <div className="content__body" dangerouslySetInnerHTML={{ __html: body }} />
+      {typeof body === 'string' ? (
+        <div className="content__body" dangerouslySetInnerHTML={{ __html: body }} />
+      ) : (
+        body
+      )}
     </div>
   </ContentWrapper>
 );

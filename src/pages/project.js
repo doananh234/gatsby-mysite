@@ -23,7 +23,6 @@ const Project = () => (
               frontmatter {
                 title
                 date(formatString: "MMM DD, YYYY")
-                slug
                 thumbnail
               }
             }

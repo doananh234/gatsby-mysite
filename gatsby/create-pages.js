@@ -34,13 +34,11 @@ const createPages = async({ graphql, actions }) => {
             excerpt(pruneLength: 250)
             html
             id
-            timeToRead
             fields {
               slug
             }
             frontmatter {
               date(formatString: "MMMM DD, YYYY")
-              slug
               title
               next
               template
@@ -56,33 +54,35 @@ const createPages = async({ graphql, actions }) => {
 
   _.each(edges, edge => {
     let page = {};
+    const { frontmatter } = edge.node;
+    const slug = `/${frontmatter.template}/${_.kebabCase(frontmatter.title)}/`;
     switch (_.get(edge, 'node.frontmatter.template')) {
       case 'post':
         page = {
-          path: edge.node.fields.slug,
+          path: slug,
           component: path.resolve('./src/templates/post-template.js'),
-          context: { slug: edge.node.fields.slug },
+          context: { slug },
         };
         break;
       case 'project':
         page = {
-          path: edge.node.fields.slug,
+          path: slug,
           component: path.resolve('./src/templates/project-template.js'),
-          context: { slug: edge.node.fields.slug },
+          context: { slug },
         };
         break;
       case 'page':
         page = {
-          path: edge.node.fields.slug,
+          path: slug,
           component: path.resolve('./src/templates/page-template.js'),
-          context: { slug: edge.node.fields.slug },
+          context: { slug },
         };
         break;
       default:
         page = {
-          path: edge.node.fields.slug,
+          path: slug,
           component: path.resolve('./src/templates/page-template.js'),
-          context: { slug: edge.node.fields.slug },
+          context: { slug },
         };
     }
     createPage(page);
