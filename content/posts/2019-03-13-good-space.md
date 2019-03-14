@@ -2,9 +2,9 @@
 template: post
 thumbnail: 'https://res.cloudinary.com/csmenouvo/image/upload/v1551166052/75.jpg'
 title: Good space
-category:
+tags:
   - APP
-next: /post/test/
+next: Good space
 draft: false
 date: 2019-03-13T05:59:22.102Z
 description: enouvo space
