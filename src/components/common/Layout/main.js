@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import theme from '../../../config/theme';
+import themeConfig from '../../../config/theme';
 
 export const MainWrapper = styled.div`
   .responsiveVideo {
@@ -31,11 +31,11 @@ export const MainWrapper = styled.div`
   }
 
   .shadow {
-    box-shadow: 0 36px 64px 0 ${({ themeType }) => theme[themeType].shadow[0]};
+    box-shadow: 0 36px 64px 0 ${({ theme }) => themeConfig[theme].shadow[0]};
   }
 
   .shadow-light {
-    box-shadow: 0 2px 40px 1px ${({ themeType }) => theme[themeType].shadow[0]};
+    box-shadow: 0 2px 40px 1px ${({ theme }) => themeConfig[theme].shadow[0]};
     transition: all 0.2s ease-in-out;
   }
 
@@ -44,7 +44,7 @@ export const MainWrapper = styled.div`
   }
 
   .shadow-super-light {
-    box-shadow: 0 5px 40px 0px ${({ themeType }) => theme[themeType].shadow[1]};
+    box-shadow: 0 5px 40px 0px ${({ theme }) => themeConfig[theme].shadow[1]};
     transition: all 0.2s ease-in-out;
   }
 

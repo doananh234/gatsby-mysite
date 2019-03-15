@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import theme from '../../../../config/theme';
+import themeConfig from '../../../../config/theme';
 
 export const SidebarContainer = styled.div`
   position: fixed;
@@ -10,7 +10,7 @@ export const SidebarContainer = styled.div`
   width: 0;
   opacity: 0;
   height: 100%;
-  background: ${({ themeType }) => theme[themeType].background.content};
+  background: ${({ theme }) => themeConfig[theme].background.content};
   transition: all 350ms cubic-bezier(0.6, 0.05, 0.28, 0.91);
 
   ${({ active }) => active

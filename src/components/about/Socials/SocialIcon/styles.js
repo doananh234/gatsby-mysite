@@ -1,11 +1,11 @@
 import styled from 'styled-components';
-import theme from '../../../../config/theme';
+import themeConfig from '../../../../config/theme';
 
 export const Social = styled.div`
   a {
     display: flex;
     align-items: center;
-    color: ${({ themeType }) => theme[themeType].text[0]};
+    color: ${({ theme }) => themeConfig[theme].text[0]};
 
     @media (max-width: 960px) {
       justify-content: center;

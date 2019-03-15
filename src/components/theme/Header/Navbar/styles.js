@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import theme from '../../../../config/theme';
+import themeConfig from '../../../../config/theme';
 
 export const Wrapper = styled.div`
   padding: 0.8rem 0;
@@ -11,7 +11,7 @@ export const Wrapper = styled.div`
 export const Brand = styled.div`
   display: flex;
   align-items: center;
-  color: ${({ themeType }) => theme[themeType].text[0]};
+  color: ${({ theme }) => themeConfig[theme].text[0]};
 `;
 
 export const BrandLogo = styled.div`

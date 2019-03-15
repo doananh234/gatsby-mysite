@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import theme from '../../../config/theme';
+import themeConfig from '../../../config/theme';
 
 export const FormWrapper = styled.div`
   text-align: center;
@@ -25,8 +25,8 @@ export const StyledForm = styled.div`
   @media (max-width: 800px) {
     width: 100%;
   }
-  color: ${({ themeType }) => theme[themeType].text[0]};
-  background: ${({ themeType }) => theme[themeType].background.content};
+  color: ${({ theme }) => themeConfig[theme].text[0]};
+  background: ${({ theme }) => themeConfig[theme].background.content};
 `;
 
 export const Subtitle = styled.p`
@@ -38,7 +38,7 @@ export const Subtitle = styled.p`
   @media (max-width: 800px) {
     font-size: 0.8em;
   }
-  color: ${({ themeType }) => theme[themeType].text[6]};
+  color: ${({ theme }) => themeConfig[theme].text[6]};
 `;
 
 export const Title = styled.h3`
@@ -51,7 +51,7 @@ export const Title = styled.h3`
   @media (max-width: 800px) {
     font-size: 1em;
   }
-  color: ${({ themeType }) => theme[themeType].text[3]};
+  color: ${({ theme }) => themeConfig[theme].text[3]};
 `;
 
 export const Message = styled.h4`

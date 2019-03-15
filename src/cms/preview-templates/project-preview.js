@@ -7,9 +7,8 @@ import { Provider } from '../../components/common';
 const PostPreview = ({ entry, widgetFor }) => {
   const body = widgetFor('body');
   const title = entry.getIn(['data', 'title']);
-  const tags = entry.getIn(['data', 'tags'])._tail.array;
+  const tags = entry.getIn(['data', 'tags']);
   const date = entry.getIn(['data', 'date']);
-  const thumbnail = entry.getIn(['data', 'thumbnail']);
   // post
   const post = {
     html: body,
@@ -17,7 +16,6 @@ const PostPreview = ({ entry, widgetFor }) => {
       tags,
       title,
       date: moment(date).format('DD-MM-YYYY'),
-      thumbnail,
     },
     fields: {
       // tagSlugs: tags.split(','),
@@ -28,7 +26,9 @@ const PostPreview = ({ entry, widgetFor }) => {
   };
   return (
     <Provider>
-      <Post post={post} />
+      <div className="post">
+        <Post post={post} />
+      </div>
     </Provider>
   );
 };

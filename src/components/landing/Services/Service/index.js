@@ -5,7 +5,7 @@ import { Wrapper, Grow, Title } from './styles';
 const ServiceItem = ({
  theme, icon, title, description,
 }) => (
-  <Wrapper themeType={theme}>
+  <Wrapper theme={theme}>
     <Grow>
       <img src={icon} alt={title} />
     </Grow>

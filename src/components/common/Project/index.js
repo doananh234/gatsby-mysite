@@ -13,7 +13,7 @@ export const Project = ({
   <ThemeContext.Consumer>
     {({ theme }) => (
       <Wrapper>
-        <Title themeType={theme}>{title}</Title>
+        <Title theme={theme}>{title}</Title>
         <Work github={github} side={side}>
           {!github
             ? projects.edges.map(({ node }) => <Card key={node.id} {...node} />)

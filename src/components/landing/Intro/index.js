@@ -9,7 +9,7 @@ const IntroUI = ({ t }) => {
   return (
     <ThemeContext.Consumer>
       {({ theme }) => (
-        <Wrapper themeType={theme} as={SmallerContainer}>
+        <Wrapper theme={theme} as={SmallerContainer}>
           <h1>{t('intro.title')}</h1>
           <p>{t('intro.description')}</p>
           <Flex>

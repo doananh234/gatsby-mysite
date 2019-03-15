@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import themeConfig from '../../../../config/theme';
 import { ThemeContext } from '../..';
 
 const CardFooter = ({ description }) => (
   <ThemeContext.Consumer>
     {({ theme }) => (
-      <Wrapper themeType={theme}>
+      <Wrapper theme={theme}>
         <p>{description}</p>
       </Wrapper>
     )}
@@ -24,7 +25,7 @@ const Wrapper = styled.div`
     font-size: 16px;
     line-height: 1.46429em;
     margin-bottom: 1rem;
-    color: ${({ theme, themeType }) => theme[themeType].text[0]};
+    color: ${({ theme }) => themeConfig[theme].text[0]};
   }
 `;
 

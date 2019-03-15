@@ -14,7 +14,7 @@ export const Wrapper = styled.div`
       margin-bottom: unset;
     }
   }
-  p: ${theme => key([theme.themeType, 'text', 1])(theme)};
+  p: ${theme => key([theme.theme, 'text', 1])(theme)};
 `;
 
 export const Grow = styled.div`

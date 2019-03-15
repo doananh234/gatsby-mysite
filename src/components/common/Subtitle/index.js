@@ -6,7 +6,7 @@ import { StyledSubtitle } from './styles';
 export const Subtitle = ({ children, active }) => (
   <ThemeContext.Consumer>
     {({ theme }) => (
-      <StyledSubtitle themeType={theme} active={active}>
+      <StyledSubtitle theme={theme} active={active}>
         {children}
       </StyledSubtitle>
     )}

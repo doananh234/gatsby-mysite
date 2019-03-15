@@ -6,7 +6,7 @@ import { SidebarContainer } from './styles';
 const Sidebar = ({ sidebar, toggle }) => (
   <ThemeContext.Consumer>
     {({ theme }) => (
-      <SidebarContainer active={sidebar} onClick={toggle} themeType={theme}>
+      <SidebarContainer active={sidebar} onClick={toggle} theme={theme}>
         <NavbarLinks />
       </SidebarContainer>
     )}

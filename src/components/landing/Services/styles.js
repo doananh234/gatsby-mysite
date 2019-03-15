@@ -9,8 +9,8 @@ export const Wrapper = styled.div`
   @media (max-width: 680px) {
     padding: 12rem 0 14rem 0;
   }
-  color: ${theme => key([theme.themeType, 'text', 0])(theme)};
-  background: ${theme => key([theme.themeType, 'background', 1])(theme)};
+  color: ${theme => key([theme.theme, 'text', 0])(theme)};
+  background: ${theme => key([theme.theme, 'background', 1])(theme)};
 `;
 
 export const Grid = styled.div`

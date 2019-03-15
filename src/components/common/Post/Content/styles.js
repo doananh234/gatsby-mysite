@@ -40,8 +40,5 @@ export const ContentWrapper = styled.div`
         margin-bottom: 12.5px;
       }
     }
-    @media (max-width: 960px) {
-      padding: 0;
-    }
   }
 `;

@@ -12,7 +12,9 @@ import { ThemeContext } from '../ThemeContext';
 
 const Post = ({ post }) => {
   const { html, frontmatter, fields } = post;
-  const { tags, title, date } = frontmatter;
+  const {
+ tags, title, date, thumbnail,
+} = frontmatter;
 
   const { tagSlugs } = fields;
 
@@ -20,22 +22,24 @@ const Post = ({ post }) => {
     <ThemeContext.Consumer>
       {({ theme }) => {
         return (
-          <PostWrapper themeType={theme}>
-            <ArticleWrapper themeType={theme}>
-              <PageTitle themeType={theme}>{title}</PageTitle>
+          <PostWrapper theme={theme}>
+            <ArticleWrapper theme={theme}>
+              <PageTitle theme={theme}>{title}</PageTitle>
               <ArticleDate>
-                <i>{`${date}`}</i>
+                <div>
+                  <i>{`${date}`}</i>
+                </div>
+                <img className="headerImg" alt={thumbnail} src={thumbnail} />
               </ArticleDate>
               <div className="post__content">
                 <Content body={html} />
               </div>
-
               <div className="post__footer">
                 <Tags tags={tags} tagSlugs={tagSlugs} />
-                <Author />
+                <Author theme={theme} />
               </div>
               <Back>
-                <Link to={frontmatter.next}>Previous article</Link>
+                <Link to={fields.next}>Previous article</Link>
               </Back>
             </ArticleWrapper>
           </PostWrapper>

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import theme from '../../../config/theme';
+import themeConfig from '../../../config/theme';
 
 export const Wrapper = styled.div`
     height: 100%;
@@ -38,8 +38,8 @@ export const StyledRepository = styled.div`
     box-shadow: 0 8px 26px 0 rgba(0, 0, 0, 0.09);
     transition: 0.3s;
   }
-  color: ${({ themeType }) => theme[themeType].text[0]};
-  background: ${({ themeType }) => theme[themeType].background.content};
+  color: ${({ theme }) => themeConfig[theme].text[0]};
+  background: ${({ theme }) => themeConfig[theme].background.content};
 `;
 
 export const Header = styled.div`
@@ -53,7 +53,7 @@ export const Header = styled.div`
     @media (max-width: 680px) {
       font-size: 1.2em;
     }
-    color: ${({ themeType }) => theme[themeType].text[0]};
+    color: ${({ theme }) => themeConfig[theme].text[0]};
   }
 `;
 
@@ -64,7 +64,7 @@ export const Description = styled.div`
     font-size: 16px;
     line-height: 1.46429em;
     margin: 0;
-    color: ${({ themeType }) => theme[themeType].text[0]};
+    color: ${({ theme }) => themeConfig[theme].text[0]};
   }
 `;
 
@@ -80,5 +80,5 @@ export const Stars = styled.div`
       margin: 0 0.5rem 0 1rem;
     }
   }
-  color: ${({ themeType }) => theme[themeType].text[0]};
+  color: ${({ theme }) => themeConfig[theme].text[0]};
 `;

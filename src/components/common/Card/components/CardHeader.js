@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import themeConfig from '../../../../config/theme';
 import { ThemeContext } from '../..';
 
 const CardHeader = ({ title }) => (
   <ThemeContext.Consumer>
     {({ theme }) => (
-      <Wrapper themeType={theme}>
+      <Wrapper theme={theme}>
         <h3>{title}</h3>
       </Wrapper>
     )}
@@ -28,7 +29,7 @@ const Wrapper = styled.div`
     @media (max-width: 680px) {
       font-size: 1.2em;
     }
-    color: ${({ theme, themeType }) => theme[themeType].text[0]};
+    color: ${({ theme }) => themeConfig[theme].text[0]};
   }
 `;
 

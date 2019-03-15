@@ -1,11 +1,11 @@
 import styled from 'styled-components';
-import theme from '../../../../config/theme';
+import themeConfig from '../../../../config/theme';
 
 export const Wrapper = styled.div`
   text-align: center;
   padding: 1rem;
-  background: ${({ themeType }) => theme[themeType].background.container};
-  color: ${({ themeType }) => theme[themeType].text[0]};
+  background: ${({ theme }) => themeConfig[theme].background.container};
+  color: ${({ theme }) => themeConfig[theme].text[0]};
 `;
 
 export const Links = styled.div`

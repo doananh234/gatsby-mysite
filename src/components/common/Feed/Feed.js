@@ -16,11 +16,6 @@ const Feed = ({ edges }) => (
               {moment(edge.node.frontmatter.date).format('MMMM YYYY')}
             </time>
             <span className="feed__item-meta-divider" />
-            <span className="feed__item-meta-category">
-              <Link to={edge.node.fields.categorySlug} className="feed__item-meta-category-link">
-                {edge.node.frontmatter.category}
-              </Link>
-            </span>
           </div>
           <h2 className="feed__item-title">
             <Link className="feed__item-title-link" to={edge.node.fields.slug}>

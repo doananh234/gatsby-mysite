@@ -28,13 +28,11 @@ const onCreateNode = ({ node, actions, getNode }) => {
       createNodeField({ node, name: 'tagSlugs', value: tagSlugs });
     }
 
-    if (node.frontmatter.category) {
-      const categorySlug = `/category/${_.kebabCase(node.frontmatter.category)}/`;
-      createNodeField({ node, name: 'categorySlug', value: categorySlug });
-    }
     if (node.frontmatter.template) {
       const slug = `/${node.frontmatter.template}/${_.kebabCase(node.frontmatter.title)}/`;
+      const next = `/${node.frontmatter.template}/${_.kebabCase(node.frontmatter.next)}/`;
       createNodeField({ node, name: 'slug', value: slug });
+      createNodeField({ node, name: 'next', value: next });
     }
   }
 };

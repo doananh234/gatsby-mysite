@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import theme from '../../../config/theme';
+import themeConfig from '../../../config/theme';
 
 export const Wrapper = styled.div`
   padding: 1rem 0;
@@ -8,6 +8,6 @@ export const Wrapper = styled.div`
 
   h2,
   p {
-    color: ${({ themeType }) => theme[themeType].text[0]};
+    color: ${({ theme }) => themeConfig[theme].text[0]};
   }
 `;

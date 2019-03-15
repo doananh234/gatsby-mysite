@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import theme from '../../../config/theme';
+import themeConfig from '../../../config/theme';
 
 export const Item = styled.div`
   max-width: 32%;
@@ -34,7 +34,7 @@ export const Post = styled.div`
     box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.2);
     transition: 0.7s;
   }
-  background: ${({ themeType }) => theme[themeType].background.content};
+  background: ${({ theme }) => themeConfig[theme].background.content};
 `;
 
 export const ArticleContent = styled.div`
@@ -78,7 +78,7 @@ export const ArticleTitle = styled.h2`
     margin-bottom: 0.1rem;
     font-size: 12pt;
   }
-  color: ${({ themeType }) => theme[themeType].text[0]};
+  color: ${({ theme }) => themeConfig[theme].text[0]};
 `;
 
 export const Paragraph = styled.p`
@@ -91,7 +91,7 @@ export const Paragraph = styled.p`
     margin-bottom: 0.1rem;
     font-size: 10pt;
   }
-  color: ${({ themeType }) => theme[themeType].text[4]};
+  color: ${({ theme }) => themeConfig[theme].text[4]};
 `;
 
 export const Info = styled.i`
@@ -100,7 +100,7 @@ export const Info = styled.i`
   @media (max-width: 680px) {
     font-size: 0.6em;
   }
-  color: ${({ themeType }) => theme[themeType].text[0]};
+  color: ${({ theme }) => themeConfig[theme].text[0]};
 `;
 
 export const StyledSpan = styled.span`

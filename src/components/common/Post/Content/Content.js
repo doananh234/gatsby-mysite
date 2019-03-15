@@ -8,7 +8,7 @@ const Content = ({ body }) => (
       {typeof body === 'string' ? (
         <div className="content__body" dangerouslySetInnerHTML={{ __html: body }} />
       ) : (
-        body
+        <div className="content__body">{body}</div>
       )}
     </div>
   </ContentWrapper>

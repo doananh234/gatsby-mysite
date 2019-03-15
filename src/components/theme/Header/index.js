@@ -10,7 +10,7 @@ import { StyledHeader, Overlay } from './styles';
 const HeaderWrapper = ({ sidebar, toggle, isHomePage }) => (
   <ThemeContext.Consumer>
     {({ theme }) => (
-      <StyledHeader isHomePage={isHomePage} themeType={theme}>
+      <StyledHeader isHomePage={isHomePage} theme={theme}>
         <Overlay sidebar={sidebar} onClick={toggle} />
         <Navbar />
         <Hamburger isHomePage={isHomePage} sidebar={sidebar} toggle={toggle} />

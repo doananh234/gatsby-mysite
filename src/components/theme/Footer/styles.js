@@ -1,9 +1,9 @@
 import styled from 'styled-components';
-import theme from '../../../config/theme';
+import themeConfig from '../../../config/theme';
 
 export const FooterContainer = styled.footer`
   margin-top: 6rem;
-  background: ${({ themeType }) => theme[themeType].background.container};
+  background: ${({ theme }) => themeConfig[theme].background.container};
 `;
 
 export const FullContainer = styled.div`

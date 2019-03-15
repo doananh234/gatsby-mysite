@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import theme from '../../../config/theme';
+import themeConfig from '../../../config/theme';
 
 export const Wrapper = styled.div`
 	height: 100%;
@@ -46,6 +46,6 @@ export const StyledCard = styled.div`
       }
     }
   }
-  color: ${({ themeType }) => theme[themeType].text[0]};
-  background: ${({ themeType }) => theme[themeType].background.content};
+  color: ${({ theme }) => themeConfig[theme].text[0]};
+  background: ${({ theme }) => themeConfig[theme].background.content};
 `;

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import theme from '../../../config/theme';
+import themeConfig from '../../../config/theme';
 
 export const ContactWrapper = styled.div`
   padding: 2rem 0;
@@ -8,7 +8,7 @@ export const ContactWrapper = styled.div`
 
 export const Wrapper = styled.div`
   margin-bottom: 2rem;
-  color: ${({ themeType }) => theme[themeType].text[0]};
+  color: ${({ theme }) => themeConfig[theme].text[0]};
 `;
 
 export const InputField = styled.div`
@@ -53,5 +53,5 @@ export const Error = styled.div`
 `;
 
 export const Text = styled.h4`
-  color: ${({ themeType }) => theme[themeType].text[0]};
+  color: ${({ theme }) => themeConfig[theme].text[0]};
 `;

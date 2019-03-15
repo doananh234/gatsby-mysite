@@ -1,14 +1,14 @@
 import styled from 'styled-components';
-import theme from '../../../config/theme';
+import themeConfig from '../../../config/theme';
 
 export const StyledHeader = styled.div`
   width: 100%;
   z-index: 1;
   position: fixed;
   margin-bottom: unset;
-  background: ${({ themeType }) => theme[themeType].background.content};
+  background: ${({ theme }) => themeConfig[theme].background.content};
 
-  box-shadow: 0px 2px 20px 0 ${({ themeType }) => theme[themeType].shadow[1]};
+  box-shadow: 0px 2px 20px 0 ${({ theme }) => themeConfig[theme].shadow[1]};
 `;
 
 export const Overlay = styled.div`

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import theme from '../../../config/theme';
+import themeConfig from '../../../config/theme';
 
 export const PostWrapper = styled.div`
   .post {
@@ -21,6 +21,14 @@ export const PostWrapper = styled.div`
       }
     }
   }
+  .headerImg {
+    width: 80%;
+    margin-top: 20px;
+    box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    height: 200px;
+    object-fit: cover;
+  }
 `;
 
 export const ArticleWrapper = styled.div`
@@ -37,7 +45,9 @@ export const ArticleWrapper = styled.div`
     font-family: 'Merriweather', serif;
     text-align: center;
   }
-  color: ${({ themeType }) => theme[themeType].text[0]};
+  color: ${({ theme }) => {
+    return themeConfig[theme].text[0];
+  }};
 `;
 
 export const Back = styled.div`
@@ -55,8 +65,6 @@ export const Comments = styled.div`
 `;
 
 export const ArticleDate = styled.div`
-  display: flex;
-  justify-content: center;
   text-align: center;
   margin-top: -1rem;
   margin-bottom: 1rem;

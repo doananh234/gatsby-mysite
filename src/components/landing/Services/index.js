@@ -25,12 +25,12 @@ const ServicesUI = ({ t }) => (
     render={({ services }) => (
       <ThemeContext.Consumer>
         {({ theme }) => (
-          <Wrapper themeType={theme}>
+          <Wrapper theme={theme}>
             <Container>
               <h2>{t('services.title')}</h2>
               <Grid>
                 {services.edges.map(({ node }) => (
-                  <Service themeType={theme} key={node.id} {...node} />
+                  <Service theme={theme} key={node.id} {...node} />
                 ))}
               </Grid>
             </Container>

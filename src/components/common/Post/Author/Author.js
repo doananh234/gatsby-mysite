@@ -11,10 +11,10 @@ export const PureAuthor = ({ data }) => {
   return (
     <AuthorWrapper>
       <div className="author">
-        <p className="author__bio">
+        <div className="author__bio">
           {author}
           <SocialShare {...frontmatter} />
-        </p>
+        </div>
       </div>
     </AuthorWrapper>
   );

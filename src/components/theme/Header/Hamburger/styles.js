@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import theme from '../../../../config/theme';
+import themeConfig from '../../../../config/theme';
 
 export const HamburgerIcon = styled.div`
   z-index: 5;
@@ -47,7 +47,7 @@ background-color 500ms;
 width: 1.6rem;
 }
 
-background: ${({ themeType }) => theme[themeType].text[0]};
+background: ${({ theme }) => themeConfig[theme].text[0]};
 
 ${({ top, sidebar }) => top
   && sidebar

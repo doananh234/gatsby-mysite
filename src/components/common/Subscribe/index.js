@@ -15,10 +15,10 @@ const Wrapper = ({
   <ThemeContext.Consumer>
     {({ theme }) => (
       <FormWrapper as={Container}>
-        <StyledForm className="shadow-super-light" themeType={theme}>
+        <StyledForm className="shadow-super-light" theme={theme}>
           <Form>
-            <Title themeType={theme}>Subscribe to doananh234.com</Title>
-            <Subtitle themeType={theme}>
+            <Title theme={theme}>Subscribe to doananh234.com</Title>
+            <Subtitle theme={theme}>
               And get the latest articles delivered right to your inbox!
             </Subtitle>
             {touched.email && errors.email && <Error>{errors.email}</Error>}

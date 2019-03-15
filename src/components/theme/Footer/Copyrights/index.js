@@ -8,7 +8,7 @@ import { Wrapper, Links, Item } from './styles';
 const Copyrights = () => (
   <ThemeContext.Consumer>
     {({ theme }) => (
-      <Wrapper as={SmallerContainer} themeType={theme}>
+      <Wrapper as={SmallerContainer} theme={theme}>
         <Links>
           ©
           {' '}

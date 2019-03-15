@@ -1,6 +1,9 @@
-import CMS from 'netlify-cms';
+import React from 'react';
 import PagePreview from './preview-templates/page-preview';
 import PostPreview from './preview-templates/post-preview';
+import { registerPreviewTemplate } from './CSSInjector';
 
-CMS.registerPreviewTemplate('pages', PagePreview);
-CMS.registerPreviewTemplate('posts', PostPreview);
+// Used like
+registerPreviewTemplate('pages', <PagePreview />);
+
+registerPreviewTemplate('posts', <PostPreview />);

@@ -23,7 +23,7 @@ export const Skills = withI18n()(({ t }) => (
     render={({ skills }) => (
       <ThemeContext.Consumer>
         {({ theme }) => (
-          <Wrapper themeType={theme}>
+          <Wrapper theme={theme}>
             <Container>
               <h2>{t('skills.title')}</h2>
               <Flex>
@@ -31,7 +31,7 @@ export const Skills = withI18n()(({ t }) => (
                   <Skill key={node.id} {...node} />
                 ))}
               </Flex>
-              <Tech themeType={theme}>
+              <Tech theme={theme}>
                 <Link to="/the-tech-tools-I-use">{t('skills.readMore')}</Link>
               </Tech>
             </Container>

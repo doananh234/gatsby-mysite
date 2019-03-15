@@ -10,9 +10,9 @@ export const Layout = ({ children }) => (
   <Provider>
     <ThemeContext.Consumer>
       {({ theme }) => (
-        <MainWrapper themeType={theme}>
+        <MainWrapper theme={theme}>
           <Header />
-          <LayoutStyled themeType={theme}>
+          <LayoutStyled theme={theme}>
             {children}
             <Subscribe />
           </LayoutStyled>
@@ -31,7 +31,7 @@ const LayoutStyled = styled.div`
   width: 100%;
   padding-top: 7rem;
 
-  ${({ theme, themeType }) => themeType === 'dark' && 'background: #212121;'};
+  ${({ theme }) => theme === 'dark' && 'background: #212121;'};
 `;
 
 export default Layout;

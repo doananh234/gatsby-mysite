@@ -26,7 +26,7 @@ export const MagicalButton = styled.a`
 
 export const Wrapper = styled.div`
   padding: 4rem 1rem;
-  color: ${theme => key([theme.themeType, 'text', 0])(theme)};
+  color: ${theme => key([theme.theme, 'text', 0])(theme)};
   p {
     color: ${palette('grayscale', 1)};
     margin-bottom: 2rem;

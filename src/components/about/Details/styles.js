@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import theme from '../../../config/theme';
+import themeConfig from '../../../config/theme';
 
 export const Wrapper = styled.div`
   flex: 1;
@@ -16,9 +16,9 @@ export const DetailsContainer = styled.div`
 export const P = styled.p`
   display: flex;
   align-items: center;
-  color: ${({ themeType }) => theme[themeType].text[0]};
+  color: ${({ theme }) => themeConfig[theme].text[0]};
 `;
 
 export const Text = styled.p`
-  color: ${({ themeType }) => theme[themeType].text[0]};
+  color: ${({ theme }) => themeConfig[theme].text[0]};
 `;

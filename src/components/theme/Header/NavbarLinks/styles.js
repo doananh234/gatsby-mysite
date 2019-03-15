@@ -1,14 +1,14 @@
 import styled from 'styled-components';
-import theme from '../../../../config/theme';
+import themeConfig from '../../../../config/theme';
 
 export const Links = styled.div`
   a {
-    color: ${({ themeType }) => theme[themeType].text[5]};
+    color: ${({ theme }) => themeConfig[theme].text[5]};
     text-decoration: none;
 
     &.current {
       font-weight: bold;
-      color: ${({ themeType }) => theme[themeType].text[0]};
+      color: ${({ theme }) => themeConfig[theme].text[0]};
     }
   }
 
