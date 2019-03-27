@@ -1,22 +1,22 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/common/Layout';
-import Page from '../components/common/Page';
+// import Page from '../components/common/Page';
 
 const PageTemplate = ({ data }) => {
-  const { title: siteTitle, subtitle: siteSubtitle } = data.site.siteMetadata;
+  // const { title: siteTitle, subtitle: siteSubtitle } = data.site.siteMetadata;
 
-  const { title: pageTitle, description: pageDescription } = data.markdownRemark.frontmatter;
+  // const { title: pageTitle, description: pageDescription } = data.markdownRemark?.frontmatter;
 
-  const { html: pageBody } = data.markdownRemark;
+  // const { html: pageBody } = data.markdownRemark;
 
-  const metaDescription = pageDescription !== null ? pageDescription : siteSubtitle;
+  // const metaDescription = pageDescription !== null ? pageDescription : siteSubtitle;
 
   return (
     <Layout title={`${pageTitle} - ${siteTitle}`} description={metaDescription}>
-      <Page title={pageTitle}>
+      {/* <Page title={pageTitle}>
         <div dangerouslySetInnerHTML={{ __html: pageBody }} />
-      </Page>
+      </Page> */}
     </Layout>
   );
 };
