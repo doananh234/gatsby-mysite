@@ -1,4 +1,5 @@
 const fs = require('fs');
+const _ = require('lodash');
 const fetch = require('node-fetch');
 const { buildClientSchema } = require('graphql');
 const { createHttpLink } = require('apollo-link-http');
@@ -101,8 +102,12 @@ module.exports = {
                 return Object.assign({}, edge.node.frontmatter, {
                   description: edge.node.excerpt,
                   date: edge.node.frontmatter.date,
-                  url: site.siteMetadata.rssMetadata.site_url + edge.node.fields.slug,
-                  guid: site.siteMetadata.rssMetadata.site_url + edge.node.fields.slug,
+                  url: `${site.siteMetadata.rssMetadata.site_url}/${
+                    edge.node.frontmatter.template
+                  }/${_.kebabCase(edge.node.frontmatter.title)}/`,
+                  guid: `${site.siteMetadata.rssMetadata.site_url}/${
+                    edge.node.frontmatter.template
+                  }/${_.kebabCase(edge.node.frontmatter.title)}/`,
                   custom_elements: [{ 'content:encoded': edge.node.html }],
                 });
               });
