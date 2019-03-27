@@ -24,6 +24,7 @@ const Project = () => (
                 title
                 date(formatString: "MMM DD, YYYY")
                 thumbnail
+                screenShort
               }
             }
           }

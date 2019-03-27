@@ -2,6 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import { Layout } from '../components/common/Layout';
 import Post from '../components/common/Post';
+import Theme1 from './projectThemes/theme1';
 
 const PostTemplate = ({ data }) => {
   const { title: siteTitle, subtitle: siteSubtitle } = data.site.siteMetadata;
@@ -11,7 +12,7 @@ const PostTemplate = ({ data }) => {
 
   return (
     <Layout title={`${postTitle} - ${siteTitle}`} description={metaDescription}>
-      <Post post={data.markdownRemark} />
+      <Theme1 post={data.markdownRemark} />
     </Layout>
   );
 };
@@ -36,6 +37,7 @@ export const query = graphql`
         date(formatString: "MMMM DD, YYYY")
         description
         tags
+        screenShort
         title
       }
     }
