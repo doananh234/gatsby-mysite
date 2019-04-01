@@ -3,6 +3,7 @@ import { graphql } from 'gatsby';
 import { Layout } from '../components/common/Layout';
 import Post from '../components/common/Post';
 import Theme1 from './projectThemes/theme1';
+import ThemeKuuho from './projectThemes/themeKuuho';
 
 const PostTemplate = ({ data }) => {
   const { title: siteTitle, subtitle: siteSubtitle } = data.site.siteMetadata;
@@ -12,7 +13,7 @@ const PostTemplate = ({ data }) => {
 
   return (
     <Layout title={`${postTitle} - ${siteTitle}`} description={metaDescription}>
-      <Theme1 post={data.markdownRemark} />
+      <ThemeKuuho project={data.markdownRemark} />
     </Layout>
   );
 };
