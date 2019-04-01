@@ -7,6 +7,10 @@ links:
   android: 'https://play.google.com/store/apps/details?id=com.kuuho.app'
   ios: 'https://itunes.apple.com/vn/app/kuuho/id1402435318?ls=1&mt=8'
   web: 'https://kuuho.com/'
+contactInfo:
+  address: 15 ta my duat
+  email: anh@gmail.com
+  phoneNubmer: 0978472011
 logo: >-
   https://res.cloudinary.com/csmenouvo/image/upload/v1554089502/logo/kuuho_logo.png
 thumbnail: >-
