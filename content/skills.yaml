@@ -1,6 +1,14 @@
-- title: 'Graphic Design'
-  icon: '/skills/brand.svg'
-- title: 'UI/UX Design'
-  icon: '/skills/designer.svg'
-- title: 'Full stack development'
-  icon: '/skills/coder.svg'
+title: Skill
+intro: 'HTML, CSS, JS, BACK-END, FRONT-END, REACT, REACT-NATIVE,...'
+items:
+  - description: 'work with express, postgresQL,....'
+    icon: 'https://res.cloudinary.com/csmenouvo/image/upload/v1556847733/server.png'
+    title: Back-End Developer
+  - description: 'react, html, css, js,...'
+    icon: >-
+      https://res.cloudinary.com/csmenouvo/image/upload/v1556847854/web-front-end.png
+    title: Web Front-end
+  - description: react-native
+    icon: >-
+      https://res.cloudinary.com/csmenouvo/image/upload/v1556847918/mobile-app.png
+    title: Mobile App Front-end
