@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { ThemeContext, Provider, Subscribe } from '..';
 import { Header, Footer } from '../../theme';
+import 'antd/dist/antd.css';
 import './layout.css';
 import { MainWrapper } from './main';
 

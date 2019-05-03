@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import 'antd/dist/antd.css';
 import Banner from './Banner';
 import HeaderContainer from './Header';
 import Intro from './Intro';

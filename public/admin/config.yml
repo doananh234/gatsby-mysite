@@ -157,11 +157,19 @@ collections:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Icon', name: 'icon', widget: 'string' }
       - { label: 'Description', name: 'description', widget: 'markdown' }
-  - name: 'skills'
-    label: 'Skills'
-    folder: 'content/skills'
-    create: true
-    fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Image', name: 'image', widget: 'image' }
-      - { label: 'Description', name: 'description', widget: 'markdown' }
+  - label: "User Info"
+    name: "userInfo"
+    files:
+      - label: "Skills"
+        name: "skills"
+        file: "content/skills.yaml"
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Intro, name: intro, widget: markdown }
+          - label: List skill
+            name: items
+            widget: list
+            fields:
+              - { label: 'Title', name: 'title', widget: 'string' }
+              - { label: 'Icon', name: 'icon', widget: 'image' }
+              - { label: 'Description', name: 'description', widget: 'markdown' }

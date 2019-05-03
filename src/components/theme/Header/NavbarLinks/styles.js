@@ -45,7 +45,6 @@ export const StyledButton = styled.button`
   cursor: pointer;
   border: none;
   position: relative;
-  top: 0.3rem;
   background: none;
   text-align: left;
 
