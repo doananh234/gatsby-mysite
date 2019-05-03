@@ -61,6 +61,7 @@ collections:
           widget: 'hidden',
           default: 'project',
         }
+      - { label: 'Highlight Project', name: 'isHighlight', widget: 'boolean', default: false }
       - { label: 'Project Name', name: 'name', widget: 'string' }
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Sub Title', name: 'subTitle', widget: 'string' }
@@ -104,6 +105,7 @@ collections:
       - label: 'Intro'
         name: 'intro'
         widget: 'list'
+        required: false
         fields:
           - { label: "title", name: "title", widget: "string" }
           - { label: "description", name: "description", widget: "string" }
@@ -112,6 +114,7 @@ collections:
       - label: 'Feature'
         name: 'feature'
         widget: 'list'
+        required: false 
         fields:
           - { label: "title", name: "title", widget: "string" }
           - { label: "description", name: "description", widget: "string", required: false }
@@ -125,6 +128,7 @@ collections:
           - label: "List Service"
             name: "listService"
             widget: "list"
+            required: false
             fields:
               - { label: "title", name: "title", widget: "string" }
               - { label: "description", name: "description", widget: "string", required: false }
@@ -152,4 +156,12 @@ collections:
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Icon', name: 'icon', widget: 'string' }
+      - { label: 'Description', name: 'description', widget: 'markdown' }
+  - name: 'skills'
+    label: 'Skills'
+    folder: 'content/skills'
+    create: true
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Image', name: 'image', widget: 'image' }
       - { label: 'Description', name: 'description', widget: 'markdown' }

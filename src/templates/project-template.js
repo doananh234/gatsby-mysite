@@ -1,21 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
-import { Layout } from '../components/common/Layout';
-import Post from '../components/common/Post';
-import Theme1 from './projectThemes/theme1';
 import ThemeKuuho from './projectThemes/themeKuuho';
+import { initAnimation } from '../utils/animation';
 
-const PostTemplate = ({ data }) => {
-  const { title: siteTitle, subtitle: siteSubtitle } = data.site.siteMetadata;
+const ProjectTemplate = ({ data }) => {
+  useEffect(() => {
+    initAnimation();
+  }, []);
+  return <ThemeKuuho project={data.markdownRemark} />;
+};
 
-  const { title: postTitle, description: postDescription } = data.markdownRemark.frontmatter;
-  const metaDescription = postDescription !== null ? postDescription : siteSubtitle;
-
-  return (
-    <Layout title={`${postTitle} - ${siteTitle}`} description={metaDescription}>
-      <ThemeKuuho project={data.markdownRemark} />
-    </Layout>
-  );
+ProjectTemplate.propTypes = {
+  data: PropTypes.object,
 };
 
 export const query = graphql`
@@ -35,14 +32,40 @@ export const query = graphql`
         tagSlugs
       }
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
-        description
-        tags
-        screenShort
+        name
+        subTitle
         title
+        date
+        tags
+        description
+        logo
+        screenShort
+        thumbnail
+        links {
+          android
+          ios
+          web
+        }
+        contactInfo {
+          address
+          email
+          phoneNubmer
+        }
+        intro {
+          title
+          description
+        }
+        service {
+          title
+          description
+        }
+        feature {
+          title
+          description
+        }
       }
     }
   }
 `;
 
-export default PostTemplate;
+export default ProjectTemplate;

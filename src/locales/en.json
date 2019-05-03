@@ -52,5 +52,9 @@
   },
   "services": {
     "title": "Services"
+  },
+  "projects": {
+    "appStore": "App Store",
+    "googlePlay": "Google Play"
   }
 }

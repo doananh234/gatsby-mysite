@@ -1,10 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Layout } from 'antd';
 import Menu from '../../../../components/common/Menu';
-import Banner from '../Banner';
-
-const { Header } = Layout;
+import { HeaderWrapper } from './styles';
 
 const MENUS = [
   {
@@ -24,14 +21,18 @@ const MENUS = [
     href: '#',
   },
 ];
-const HeaderContainer = () => {
+const HeaderContainer = ({ logo, name }) => {
   return (
-    <Header>
+    <HeaderWrapper>
+      <img alt={logo} src={logo} className="logo" />
+      <div className="projectName">{name}</div>
       <Menu menus={MENUS} />
-      <Banner />
-    </Header>
+    </HeaderWrapper>
   );
 };
-HeaderContainer.propTypes = {};
+HeaderContainer.propTypes = {
+  logo: PropTypes.string,
+  name: PropTypes.string,
+};
 
 export default HeaderContainer;
