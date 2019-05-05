@@ -106,5 +106,6 @@ service:
           Ứng dụng cho phép ghi lại tin nhắn thoại - 20 giây, giúp thông điệp
           gửi đi một cách đầy đủ, rõ ràng hơn.
 ---
+A low cost and high effective platform for
 
-test
+social security and safety.
