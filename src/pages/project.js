@@ -11,7 +11,7 @@ const ProjectPage = () => (
       query {
         sideProjects: allMarkdownRemark(
           filter: { frontmatter: { template: { eq: "project" }, draft: { ne: true } } }
-          sort: { order: DESC, fields: [frontmatter___date] }
+          sort: { order: ASC, fields: [frontmatter___date] }
           limit: 20
         ) {
           edges {
