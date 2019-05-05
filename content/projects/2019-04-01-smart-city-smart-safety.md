@@ -1,8 +1,9 @@
 ---
 template: project
+isHighlight: true
 name: Kuuho
 title: Smart City. Smart Safety
-subTitle: ' Giúp bạn phát thông báo kêu gọi hỗ trợ chỉ với MỘT nút bấm!'
+subTitle: A low cost and high effective platform for social security and safety.
 links:
   android: 'https://play.google.com/store/apps/details?id=com.kuuho.app'
   ios: 'https://itunes.apple.com/vn/app/kuuho/id1402435318?ls=1&mt=8'
@@ -14,7 +15,7 @@ contactInfo:
 logo: >-
   https://res.cloudinary.com/csmenouvo/image/upload/v1554089502/logo/kuuho_logo.png
 thumbnail: >-
-  https://res.cloudinary.com/csmenouvo/image/upload/v1554089569/thumbnail/mockup_iphone_Kuuho-1.png
+  https://res.cloudinary.com/csmenouvo/image/upload/v1557022301/Screen_Shot_2019-05-05_at_9.09.20_AM.png
 screenShort:
   - >-
     https://res.cloudinary.com/csmenouvo/image/upload/v1554094609/Kuuho/screenshort_306x510_22.png
@@ -29,7 +30,9 @@ screenShort:
 draft: false
 date: 2019-04-01T05:12:52.488Z
 endDate: 2019-04-01T05:12:52.544Z
-description: test
+description: |-
+  A low cost and high effective platform for
+  social security and safety.
 category:
   - APP
   - UI
@@ -103,5 +106,6 @@ service:
           Ứng dụng cho phép ghi lại tin nhắn thoại - 20 giây, giúp thông điệp
           gửi đi một cách đầy đủ, rõ ràng hơn.
 ---
+A low cost and high effective platform for
 
-test
+social security and safety.

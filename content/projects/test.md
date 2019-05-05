@@ -16,7 +16,8 @@ contactInfo:
   phoneNubmer: '+84789472011'
 logo: >-
   https://res.cloudinary.com/csmenouvo/image/upload/v1556848997/iTunesArtwork_1x.png
-thumbnail: 'https://res.cloudinary.com/csmenouvo/image/upload/v1556849046/devices.png'
+thumbnail: >-
+  https://res.cloudinary.com/csmenouvo/image/upload/v1557022300/Screen_Shot_2019-05-05_at_9.09.43_AM.png
 screenShort:
   - >-
     https://res.cloudinary.com/csmenouvo/image/upload/v1556848809/Chat_Detail.png
