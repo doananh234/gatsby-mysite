@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 import { withI18n } from 'react-i18next';
 import { StaticQuery, graphql } from 'gatsby';
 import {
