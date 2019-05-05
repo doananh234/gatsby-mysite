@@ -34,9 +34,8 @@ description: |-
   A low cost and high effective platform for
   social security and safety.
 category:
-  - APP
-  - UI
   - WEB
+  - APP
 intro:
   - title: An ninh trật tự
     description: >-
