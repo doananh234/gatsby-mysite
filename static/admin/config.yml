@@ -88,7 +88,7 @@ collections:
           allow_multiple: true,
           media_library: { config: { multiple: true } },
         }  
-      - { label: 'Draft', name: 'draft', widget: 'boolean', default: true }
+      - { label: 'Draft', name: 'draft', widget: 'boolean', default: false }
       - { label: 'Start Date', name: 'date', widget: 'datetime' }
       - { label: 'End Date', name: 'endDate', widget: 'datetime' }
       - { label: 'Description', name: 'description', widget: 'text' }

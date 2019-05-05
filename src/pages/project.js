@@ -1,11 +1,11 @@
 import React from 'react';
-import { withI18n } from 'react-i18next';
+import i18next from 'i18next';
 import { StaticQuery, graphql } from 'gatsby';
 import {
  Layout, Container, SEO, PageTitle, Project,
 } from '../components/common';
 
-const ProjectPage = withI18n()(({ t }) => (
+const ProjectPage = () => (
   <StaticQuery
     query={graphql`
       query {
@@ -44,12 +44,12 @@ const ProjectPage = withI18n()(({ t }) => (
       <Layout>
         <Container>
           <SEO title="Project" type="Organization" location="/roject" />
-          <PageTitle>{t('work.sideProjects')}</PageTitle>
+          <PageTitle>{i18next.t('work.sideProjects')}</PageTitle>
           <Project projects={sideProjects} side />
         </Container>
       </Layout>
     )}
   />
-));
+);
 
 export default ProjectPage;

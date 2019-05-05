@@ -1,14 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
 <url> <loc>https://anhdoan.com/tags</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://anhdoan.com/page/about-me/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://anhdoan.com/category/app/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://anhdoan.com/null/ui/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://anhdoan.com/null/design/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://anhdoan.com/category/web/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://anhdoan.com/project/tutor/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://anhdoan.com/page/about-me/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://anhdoan.com/null/back-end-developer/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://anhdoan.com/null/mobile-app-front-end/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://anhdoan.com/null/web-front-end/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://anhdoan.com/project/english-for-kid-play-learn/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://anhdoan.com/project/study-english-by-conversation/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://anhdoan.com/project/spotz-be-creative-be-productive/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://anhdoan.com/project/leedpop/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://anhdoan.com/project/airbrowz-mobile-shop/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://anhdoan.com/project/reebonz-your-world-of-luxury/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://anhdoan.com/project/smart-city-smart-safety/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://anhdoan.com/post/good-space/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://anhdoan.com/project/go-eat/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://anhdoan.com/post/test/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://anhdoan.com/project/travel-food-guide/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://anhdoan.com/project/tutors-near-you/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://anhdoan.com/tag/app</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://anhdoan.com/tag/ui</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://anhdoan.com/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>

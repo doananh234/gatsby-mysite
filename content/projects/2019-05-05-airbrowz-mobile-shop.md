@@ -21,7 +21,7 @@ screenShort:
     https://res.cloudinary.com/csmenouvo/image/upload/v1557050158/Screen_Shot_2019-05-05_at_4.55.27_PM.png
   - >-
     https://res.cloudinary.com/csmenouvo/image/upload/v1557050023/YLbd5cZD2T0RwIXKcN4JqW-UOuA4e4lHCIkRhh4NQldaKKG_JmTAz8n5YFdCsuMsNr4_s360-rw.webp
-draft: true
+draft: false
 date: 2019-05-05T09:50:03.724Z
 endDate: 2019-05-05T09:50:03.803Z
 description: ' You could be craving a fantastic taste from a new restaurant, or needing a soothing day at a spa. You could even feel like trying out the latest craft beer at a nearby pub- no matter what you crave or are looking for, airbrowz is all you need, simply Tap and start enjoying your savings!  Need to find an accountant around tax time? Stressed from your day? Need a gym? Download airbrowz and start discovering. '

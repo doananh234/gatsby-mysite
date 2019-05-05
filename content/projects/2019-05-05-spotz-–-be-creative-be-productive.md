@@ -24,7 +24,7 @@ screenShort:
   - 'https://res.cloudinary.com/csmenouvo/image/upload/v1557050874/460x0w.jpg'
   - >-
     https://res.cloudinary.com/csmenouvo/image/upload/v1557050927/Screen_Shot_2019-05-05_at_5.08.28_PM.png
-draft: true
+draft: false
 date: 2019-05-05T10:04:35.496Z
 endDate: 2019-05-05T10:04:35.610Z
 description: >-
