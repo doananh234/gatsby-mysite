@@ -14,11 +14,12 @@ contactInfo:
   phoneNubmer: +8478 947 2011
 logo: >-
   https://res.cloudinary.com/csmenouvo/image/upload/v1557052055/englishForKids.png
-thumbnail: 'https://res.cloudinary.com/csmenouvo/image/upload/v1557052207/Android_1.png'
+thumbnail: >-
+  https://res.cloudinary.com/csmenouvo/image/upload/v1557054042/Screen_Shot_2019-05-05_at_6.00.18_PM.png
 screenShort:
   - 'https://res.cloudinary.com/csmenouvo/image/upload/v1557052207/Android_1.png'
   - >-
-    https://res.cloudinary.com/csmenouvo/image/upload/v1557052055/englishForKids.png
+    https://res.cloudinary.com/csmenouvo/image/upload/v1557054042/Screen_Shot_2019-05-05_at_6.00.18_PM.png
 draft: false
 date: 2019-05-05T10:22:34.006Z
 endDate: 2019-05-05T10:22:34.065Z
