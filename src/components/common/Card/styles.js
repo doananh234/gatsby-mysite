@@ -3,6 +3,15 @@ import themeConfig from '../../../config/theme';
 
 export const Wrapper = styled.div`
 	height: 100%;
+  .gatsby-image-wrapper {
+    max-height: 250px;
+    padding: 25px;
+    background: white;
+    img {
+      object-fit: contain;
+      max-height: 200px;
+    }
+  }
 	${({ id }) => id === 0
     && `
 		@media (max-width: 680px) {

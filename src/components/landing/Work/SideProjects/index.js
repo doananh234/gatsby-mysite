@@ -6,20 +6,25 @@ export default () => (
   <StaticQuery
     query={graphql`
       query {
-        sideProjects: allSideprojectsYaml {
+        sideProjects: allMarkdownRemark(
+          filter: { frontmatter: { template: { eq: "project" }, draft: { ne: true }, isHighlight: { ne: false } } }
+          sort: { order: DESC, fields: [frontmatter___date] }
+          limit: 20
+        ) {
           edges {
             node {
-              id
-              title
-              image {
-                childImageSharp {
-                  fluid(maxWidth: 630) {
-                    ...GatsbyImageSharpFluid_tracedSVG
-                  }
-                }
+              excerpt(pruneLength: 230)
+              fields {
+                slug
               }
-              link
-              description
+              frontmatter {
+                name
+                title
+                description
+                date(formatString: "MMM DD, YYYY")
+                thumbnail
+                screenShort
+              }
             }
           }
         }

@@ -9,15 +9,19 @@ export const Skills = withI18n()(({ t }) => (
   <StaticQuery
     query={graphql`
       query {
-        skills: allSkillsYaml {
-          edges {
-            node {
-              id
-              title
-              icon
+          skills: allContentYaml {
+            edges {
+              node {
+                title
+                intro
+                items {
+                  description
+                  icon
+                  title
+                }
+              }
             }
           }
-        }
       }
     `}
     render={({ skills }) => (
@@ -27,8 +31,8 @@ export const Skills = withI18n()(({ t }) => (
             <Container>
               <h2>{t('skills.title')}</h2>
               <Flex>
-                {skills.edges.map(({ node }) => (
-                  <Skill key={node.id} {...node} />
+                {skills.edges[0].node.items.map((node) => (
+                  <Skill key={node.title} {...node} />
                 ))}
               </Flex>
               <Tech theme={theme}>

@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Img from 'gatsby-image';
 
-const CardBody = ({ title, image }) => (
+const CardBody = ({ title, image, thumbnail }) => (
   <Wrapper>
-    <Img fluid={image.childImageSharp.fluid} alt={title} />
+    {image?<Img fluid={image.childImageSharp.fluid} alt={title} />: <div class='gatsby-image-wrapper'><img alt={title} src={thumbnail} /></div>}
   </Wrapper>
 );
 
