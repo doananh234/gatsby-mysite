@@ -15,7 +15,10 @@ contactInfo:
 logo: >-
   https://res.cloudinary.com/csmenouvo/image/upload/v1557052055/englishForKids.png
 thumbnail: 'https://res.cloudinary.com/csmenouvo/image/upload/v1557052207/Android_1.png'
-screenShort: 'https://res.cloudinary.com/csmenouvo/image/upload/v1557052207/Android_1.png'
+screenShort:
+  - 'https://res.cloudinary.com/csmenouvo/image/upload/v1557052207/Android_1.png'
+  - >-
+    https://res.cloudinary.com/csmenouvo/image/upload/v1557052055/englishForKids.png
 draft: true
 date: 2019-05-05T10:22:34.006Z
 endDate: 2019-05-05T10:22:34.065Z
