@@ -26,6 +26,12 @@ const ProjectPage = withI18n()(({ t }) => (
                 title
                 logo
                 description
+                category {
+                  id
+                  frontmatter {
+                    icon
+                  }
+                }
                 date(formatString: "MMM DD, YYYY")
                 thumbnail
                 screenShort

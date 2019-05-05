@@ -1,7 +1,7 @@
 ---
 template: category
 title: APP
-icon: app
+icon: tablet
 description: this is app
 ---
 

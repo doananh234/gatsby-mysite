@@ -1,6 +1,6 @@
 ---
 title: UI
-icon: ui
+icon: highlight
 description: UI
 ---
 

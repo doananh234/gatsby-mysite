@@ -1,7 +1,6 @@
 ---
 template: category
 title: WEB
-icon: WEB
+icon: desktop
 description: WEB
 ---
-

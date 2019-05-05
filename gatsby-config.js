@@ -280,4 +280,7 @@ module.exports = {
     },
     'gatsby-plugin-offline',
   ],
+  mapping: {
+    'MarkdownRemark.frontmatter.category': 'MarkdownRemark.frontmatter.title',
+  },
 };
