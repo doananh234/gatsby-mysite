@@ -7,15 +7,15 @@ import CardFooter from './components/CardFooter';
 import { Wrapper, StyledCard } from './styles';
 
 export const Card = ({
- id, link, title, image, description, frontmatter
+ id, link, title, image, description, frontmatter,
 }) => (
   <ThemeContext.Consumer>
     {({ theme }) => (
       <Wrapper id={id} as="a" href={link}>
         <StyledCard className="shadow-super-light" theme={theme}>
-          <CardHeader title={title} {...frontmatter} />
+          <CardHeader {...frontmatter} title={frontmatter.name || title} />
           <CardBody image={image} title={title} {...frontmatter} />
-          <CardFooter description={description} {...frontmatter}  />
+          <CardFooter description={description} {...frontmatter} />
         </StyledCard>
       </Wrapper>
     )}
@@ -28,9 +28,9 @@ Card.propTypes = {
   title: PropTypes.string,
   image: PropTypes.any,
   description: PropTypes.string,
-  frontmatter: PropTypes.object
+  frontmatter: PropTypes.object,
 };
 
 Card.defaultProps = {
-  frontmatter: {}
-}
+  frontmatter: {},
+};

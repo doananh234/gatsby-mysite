@@ -36,7 +36,7 @@ export const Github = () => (
             icon={GithubIcon}
             type="Github"
             projects={github.repositoryOwner.repositories.edges}
-            link="https://github.com/smakosh"
+            link="https://github.com/doananh234"
             color="#000"
             github
           />

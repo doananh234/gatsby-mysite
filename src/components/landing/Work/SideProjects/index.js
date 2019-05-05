@@ -1,5 +1,6 @@
 import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
+
 import { Project } from '../../../common';
 
 export default () => (
@@ -7,12 +8,19 @@ export default () => (
     query={graphql`
       query {
         sideProjects: allMarkdownRemark(
-          filter: { frontmatter: { template: { eq: "project" }, draft: { ne: true }, isHighlight: { ne: false } } }
+          filter: {
+            frontmatter: {
+              template: { eq: "project" }
+              draft: { ne: true }
+              isHighlight: { ne: false }
+            }
+          }
           sort: { order: DESC, fields: [frontmatter___date] }
           limit: 20
         ) {
           edges {
             node {
+              id
               excerpt(pruneLength: 230)
               fields {
                 slug
@@ -20,6 +28,7 @@ export default () => (
               frontmatter {
                 name
                 title
+                logo
                 description
                 date(formatString: "MMM DD, YYYY")
                 thumbnail
@@ -30,6 +39,8 @@ export default () => (
         }
       }
     `}
-    render={({ sideProjects }) => <Project title="Side Projects" projects={sideProjects} side />}
+    render={({ sideProjects }) => (
+      <Project projects={sideProjects} color="#000" side footerSide="/project" />
+    )}
   />
 );

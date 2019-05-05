@@ -7,7 +7,7 @@ import IntroItem from './IntroItem';
 const Intro = ({ intro }) => {
   return (
     <IntroWrapper>
-      <Row data-aos="fade-up" type="flex" gutter={10}>
+      <Row type="flex" gutter={10}>
         {intro.map((item, index) => (
           <Col className="itroItemWrapper" lg={6} md={12} xs={24} key={String(index)}>
             <IntroItem {...item} />

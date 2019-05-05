@@ -1,15 +1,16 @@
-import styled from 'styled-components';
+import React from 'react';
+import PropTypes from 'prop-types';
+import { ThemeContext } from '..';
+import { ContainerWrapper } from './styles';
 
-export const Container = styled.div`
-  max-width: 1280px;
-  margin: 0 auto;
-  width: 90%;
+export const Container = (props) => {
+  return (
+    <ThemeContext.Consumer>
+      {({ theme }) => <ContainerWrapper theme={theme} {...props}/>}
+    </ThemeContext.Consumer>
+  );
+};
 
-  @media (min-width: 601px) {
-    width: 90%;
-  }
-
-  @media (min-width: 993px) {
-    width: 80%;
-  }
-`;
+Container.propTypes = {
+  children: PropTypes.any,
+};

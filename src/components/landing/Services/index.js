@@ -1,10 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Row } from 'antd';
 import { StaticQuery, graphql } from 'gatsby';
 import { withI18n } from 'react-i18next';
+import RcTweenOne from 'rc-tween-one';
 import { Container, ThemeContext } from '../../common';
 import Service from './Service';
-import { Wrapper, Grid } from './styles';
+import { Wrapper } from './styles';
 
 const ServicesUI = ({ t }) => (
   <StaticQuery
@@ -27,12 +29,14 @@ const ServicesUI = ({ t }) => (
         {({ theme }) => (
           <Wrapper theme={theme}>
             <Container>
-              <h2>{t('services.title')}</h2>
-              <Grid>
-                {services.edges.map(({ node }) => (
-                  <Service theme={theme} key={node.id} {...node} />
+              <RcTweenOne key="0" component="h2" animation={{ opacity: 1 }} style={{ opacity: 0 }}>
+                {t('services.title')}
+              </RcTweenOne>
+              <Row type="flex">
+                {services.edges.map(({ node }, index) => (
+                  <Service index={index} theme={theme} key={node.id} {...node} />
                 ))}
-              </Grid>
+              </Row>
             </Container>
           </Wrapper>
         )}

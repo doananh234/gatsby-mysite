@@ -5,24 +5,27 @@ import { ThemeContext, Provider, Subscribe } from '..';
 import { Header, Footer } from '../../theme';
 import 'antd/dist/antd.css';
 import './layout.css';
+
 import { MainWrapper } from './main';
 
-export const Layout = ({ children }) => (
-  <Provider>
-    <ThemeContext.Consumer>
-      {({ theme }) => (
-        <MainWrapper theme={theme}>
-          <Header />
-          <LayoutStyled theme={theme}>
-            {children}
-            <Subscribe />
-          </LayoutStyled>
-          <Footer />
-        </MainWrapper>
-      )}
-    </ThemeContext.Consumer>
-  </Provider>
-);
+export const Layout = ({ children }) => {
+  return (
+    <Provider>
+      <ThemeContext.Consumer>
+        {({ theme }) => (
+          <MainWrapper theme={theme}>
+            <Header />
+            <LayoutStyled theme={theme}>
+              {children}
+              <Subscribe />
+            </LayoutStyled>
+            <Footer />
+          </MainWrapper>
+        )}
+      </ThemeContext.Consumer>
+    </Provider>
+  );
+};
 
 Layout.propTypes = {
   children: PropTypes.any,

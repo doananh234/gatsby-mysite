@@ -20,8 +20,8 @@ const ContactForm = ({
         <Text theme={theme}>
           Feel free to email me via
           {' '}
-          <a href="mailto:ismai23l@hotmail.com" target="_top">
-            ismai23l@hotmail.com
+          <a href="mailto:doananh234@gmail.com" target="_top">
+            doananh234@gmail.com
           </a>
         </Text>
         <Text as="p" theme={theme}>

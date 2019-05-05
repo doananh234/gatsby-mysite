@@ -242,7 +242,7 @@ We use Security Cookies for security purposes.
       <h2>Contact Us</h2>
       <p>If you have any questions about this Privacy Policy, please contact us:</p>
       <ul>
-        <li>By email: ismai23l@hotmail.com</li>
+        <li>By email: doananh234@gmail.com</li>
         <li>By visiting this page on our website: https://doananh234.com/contact</li>
 
         <li>By phone number: +212663532761</li>

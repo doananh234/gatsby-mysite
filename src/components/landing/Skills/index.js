@@ -1,27 +1,28 @@
 import React from 'react';
-import { Link, StaticQuery, graphql } from 'gatsby';
+import { StaticQuery, graphql } from 'gatsby';
 import { withI18n } from 'react-i18next';
+import TweenOne from 'rc-tween-one';
 import { Container, ThemeContext } from '../../common';
 import Skill from './Skill';
-import { Wrapper, Tech, Flex } from './styles';
+import { Wrapper, Flex } from './styles';
 
 export const Skills = withI18n()(({ t }) => (
   <StaticQuery
     query={graphql`
       query {
-          skills: allContentYaml {
-            edges {
-              node {
+        skills: allContentYaml {
+          edges {
+            node {
+              title
+              intro
+              items {
+                description
+                icon
                 title
-                intro
-                items {
-                  description
-                  icon
-                  title
-                }
               }
             }
           }
+        }
       }
     `}
     render={({ skills }) => (
@@ -31,13 +32,21 @@ export const Skills = withI18n()(({ t }) => (
             <Container>
               <h2>{t('skills.title')}</h2>
               <Flex>
-                {skills.edges[0].node.items.map((node) => (
-                  <Skill key={node.title} {...node} />
+                {skills.edges[0].node.items.map((node, index) => (
+                  <TweenOne
+                    key={node.title}
+                    animation={{
+                      y: 0,
+                      opacity: 1,
+                      duration: 600,
+                      delay: 600 + index * 80,
+                    }}
+                    style={{ transform: 'translateY(100px)', opacity: 0 }}
+                  >
+                    <Skill key={node.title} {...node} />
+                  </TweenOne>
                 ))}
               </Flex>
-              <Tech theme={theme}>
-                <Link to="/the-tech-tools-I-use">{t('skills.readMore')}</Link>
-              </Tech>
             </Container>
           </Wrapper>
         )}

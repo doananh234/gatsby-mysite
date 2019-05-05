@@ -5,20 +5,22 @@ import Img from 'gatsby-image';
 
 const CardBody = ({ title, image, thumbnail }) => (
   <Wrapper>
-    {image?<Img fluid={image.childImageSharp.fluid} alt={title} />: <div class='gatsby-image-wrapper'><img alt={title} src={thumbnail} /></div>}
+    {image ? <Img fluid={image.childImageSharp.fluid} alt={title} />: <div className='gatsby-image-wrapper'><img alt={title} src={thumbnail} /></div>}
   </Wrapper>
 );
 
 CardBody.propTypes = {
   title: PropTypes.string,
   image: PropTypes.any,
+  thumbnail: PropTypes.any,
 };
 
 const Wrapper = styled.div`
   overflow: visible;
-
+  flex: 1;
   .gatsby-image-wrapper {
     transition: 0.3s;
+    height: 100%;
   }
 
   img {

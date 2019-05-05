@@ -7,6 +7,16 @@ export const Title = styled.h4`
 
 export const Wrapper = styled.div`
   margin-bottom: 2.5rem;
+  .footerSide {
+    margin-top: 30px;
+    a {
+      max-width: 320px;
+      &:hover {
+        color: white;
+        transform: scale(1.05);
+      }
+    }
+  }
 `;
 
 export const Work = styled.div`

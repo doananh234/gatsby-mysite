@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { palette, key } from 'styled-theme';
+import themeConfig from '../../../config/theme';
 
 export const MagicalButton = styled.a`
   color: ${palette('button', 0)};
@@ -8,6 +9,10 @@ export const MagicalButton = styled.a`
   background: ${palette('primary', 0)};
   border-radius: 0.3rem;
   transition: 0.5s;
+  font-size: 17px;
+  &:hover {
+    color: ${palette('button', 0)};
+  }
 
   @media (max-width: 380px) {
     width: 80%;
@@ -25,8 +30,28 @@ export const MagicalButton = styled.a`
 `;
 
 export const Wrapper = styled.div`
-  padding: 4rem 1rem;
+  display: flex;
+  padding: 0 10%;
+  algin-items: center;
+  .leftIntro {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .rightIntro {
+    flex: 1;
+  }
+
+  @media (max-width: 875px) {
+    text-align: center;
+    flex-direction: column-reverse;
+    algin-items: center;
+  }
   color: ${theme => key([theme.theme, 'text', 0])(theme)};
+  h1 {
+    color: ${({ theme }) => themeConfig[theme].text[0]};
+  }
   p {
     color: ${palette('grayscale', 1)};
     margin-bottom: 2rem;
@@ -37,6 +62,9 @@ export const Flex = styled.div`
   display: flex;
   align-items: center;
 
+  @media (max-width: 875px) {
+    justify-content: center;
+  }
   @media (max-width: 380px) {
     flex-direction: column;
   }

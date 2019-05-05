@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import { Layout } from '../components/common/Layout';
 import Post from '../components/common/Post';
-import { initAnimation } from '../utils/animation';
 
 const PostTemplate = ({ data }) => {
   const { title: siteTitle, subtitle: siteSubtitle } = data.site.siteMetadata;
@@ -11,9 +10,6 @@ const PostTemplate = ({ data }) => {
   const { title: postTitle, description: postDescription } = data.markdownRemark.frontmatter;
   const metaDescription = postDescription !== null ? postDescription : siteSubtitle;
 
-  useEffect(() => {
-    initAnimation();
-  }, []);
   return (
     <Layout title={`${postTitle} - ${siteTitle}`} description={metaDescription}>
       <Post post={data.markdownRemark} />

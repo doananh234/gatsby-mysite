@@ -1,15 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
+import { withI18n } from 'react-i18next';
 import { StaticQuery, graphql } from 'gatsby';
 import {
- Layout, Container, SEO, PageTitle, CardPost,
+ Layout, Container, SEO, PageTitle, Project,
 } from '../components/common';
 
-const Project = () => (
+const ProjectPage = withI18n()(({ t }) => (
   <StaticQuery
     query={graphql`
-      query ProjectQuery {
-        allMarkdownRemark(
+      query {
+        sideProjects: allMarkdownRemark(
           filter: { frontmatter: { template: { eq: "project" }, draft: { ne: true } } }
           sort: { order: DESC, fields: [frontmatter___date] }
           limit: 20
@@ -23,6 +24,7 @@ const Project = () => (
               frontmatter {
                 name
                 title
+                logo
                 description
                 date(formatString: "MMM DD, YYYY")
                 thumbnail
@@ -33,37 +35,16 @@ const Project = () => (
         }
       }
     `}
-    render={data => (
+    render={({ sideProjects }) => (
       <Layout>
         <Container>
           <SEO title="Project" type="Organization" location="/roject" />
-          <PageTitle>Articles</PageTitle>
-          <Row>
-            {data.allMarkdownRemark.edges.map(post => (
-              <CardPost key={post.node.fields.slug} {...post} />
-            ))}
-          </Row>
+          <PageTitle>{t('work.sideProjects')}</PageTitle>
+          <Project projects={sideProjects} side />
         </Container>
       </Layout>
     )}
   />
-);
+));
 
-const Row = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-
-  &:after {
-    content: '';
-    max-width: 32%;
-    width: 100%;
-
-    @media (max-width: 960px) {
-      content: unset;
-    }
-  }
-`;
-
-export default Project;
+export default ProjectPage;

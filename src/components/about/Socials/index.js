@@ -54,7 +54,7 @@ const Socials = () => (
           id: 3,
           name: 'Linkedin',
           icon: theme === 'dark' ? linkedinWhite : linkedin,
-          link: 'https://www.linkedin.com/in/ismail-ghallou-630149122',
+          link: 'https://www.linkedin.com/in/doananh234',
         },
       ];
       const creatives = [
@@ -68,7 +68,7 @@ const Socials = () => (
           id: 1,
           name: 'Behance',
           icon: theme === 'dark' ? behanceWhite : behance,
-          link: 'https://www.behance.net/ismail16sm9991',
+          link: 'https://www.behance.net/doananh234',
         },
         {
           id: 2,
@@ -80,13 +80,13 @@ const Socials = () => (
           id: 3,
           name: 'Medium',
           icon: theme === 'dark' ? mediumWhite : medium,
-          link: 'https://medium.com/@ismailghallou',
+          link: 'https://medium.com/@doananh234',
         },
         {
           id: 4,
           name: 'Youtube',
           icon: theme === 'dark' ? youtubeWhite : youtube,
-          link: 'https://youtube.com/user/doananh234thegamer',
+          link: 'https://youtube.com/user/doananh234',
         },
         {
           id: 5,

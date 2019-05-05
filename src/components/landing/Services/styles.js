@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { key } from 'styled-theme';
+import themeConfig from '../../../config/theme';
 
 export const Wrapper = styled.div`
   margin-bottom: 1.45rem;
@@ -9,8 +10,8 @@ export const Wrapper = styled.div`
   @media (max-width: 680px) {
     padding: 12rem 0 14rem 0;
   }
-  color: ${theme => key([theme.theme, 'text', 0])(theme)};
-  background: ${theme => key([theme.theme, 'background', 1])(theme)};
+  color: ${({ theme }) => themeConfig[theme].text[0]};
+  background: ${({ theme }) => themeConfig[theme].background.container};
 `;
 
 export const Grid = styled.div`

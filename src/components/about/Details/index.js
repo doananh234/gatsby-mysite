@@ -34,7 +34,7 @@ const Details = () => (
         <DetailsContainer>
           <P theme={theme}>
             <Img src={theme === 'dark' ? EnvelopeWhite : Envelope} alt="email" />
-            ismai23l@hotmail.com
+            doananh234@gmail.com
           </P>
           <P theme={theme}>
             <Img src={theme === 'dark' ? PhoneWhite : Phone} alt="phone" />

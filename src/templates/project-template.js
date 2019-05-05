@@ -2,12 +2,8 @@ import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import ThemeKuuho from './projectThemes/themeKuuho';
-import { initAnimation } from '../utils/animation';
 
 const ProjectTemplate = ({ data }) => {
-  useEffect(() => {
-    initAnimation();
-  }, []);
   return <ThemeKuuho project={data.markdownRemark} />;
 };
 

@@ -3,13 +3,12 @@ import themeConfig from '../../../config/theme';
 
 export const Wrapper = styled.div`
 	height: 100%;
+  padding: 5px;
   .gatsby-image-wrapper {
-    max-height: 250px;
-    padding: 25px;
     background: white;
+    padding: auto;
     img {
-      object-fit: contain;
-      max-height: 200px;
+      object-fit: cover;
     }
   }
 	${({ id }) => id === 0
@@ -38,7 +37,14 @@ export const StyledCard = styled.div`
   height: 100%;
   border-radius: 2px;
   transition: 0.3s;
-
+  display: flex;
+  flex-direction: column;
+  .max-lines {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
   &:hover {
     box-shadow: 0 8px 26px 0 rgba(0, 0, 0, 0.09);
     transition: 0.3s;
