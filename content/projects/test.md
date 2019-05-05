@@ -30,7 +30,6 @@ description: >-
   Designed for international tourists who love discovering culinary secrets and
   local deliciousness
 category:
-  - WEB
   - APP
 intro:
   - title: Explore

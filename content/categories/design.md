@@ -1,6 +1,6 @@
 ---
 title: DESIGN
-icon: design
+icon: highlight
 description: design
 ---
 
