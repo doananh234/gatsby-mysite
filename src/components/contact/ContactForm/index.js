@@ -76,13 +76,13 @@ const ContactForm = ({
             </label>
             <ErrorMessage component={Error} name="message" />
           </Wrapper>
-          <FastField
+          {/* <FastField
             component={Recaptcha}
             sitekey="6Lcs6lQUAAAAAEwhNH2IsobIe2csdda4TU3efpMN"
             name="recaptcha"
             onChange={value => setFieldValue('recaptcha', value)}
-          />
-          <ErrorMessage component={Error} name="recaptcha" />
+          /> */}
+          {/* <ErrorMessage component={Error} name="recaptcha" /> */}
           <Center>
             <CustomButton type="submit" disabled={isSubmitting}>
               Send

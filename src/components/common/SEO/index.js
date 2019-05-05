@@ -99,7 +99,7 @@ export const SEO = ({
 
       <meta property="og:url" content={`${url}${location}/?ref=doananh234.com`} />
       <meta property="og:type" content={type === 'NewsArticle' ? 'NewsArticle' : 'website'} />
-      <meta property="og:title" content={title ? `doananh234 | ${title}` : defaultTitle} />
+      <meta property="og:title" content={title ? `Anh Doan | ${title}` : defaultTitle} />
       <meta property="og:description" content={description || defaultDescription} />
       <meta property="og:image" content={cover ? `${url}${cover}` : `${url}${Thumbnail}`} />
       <meta property="fb:app_id" content={social.facebook} />
@@ -107,13 +107,13 @@ export const SEO = ({
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:creator" content={socialLinks.twitter} />
       <meta name="twitter:site" content={social.twitter} />
-      <meta name="twitter:title" content={title ? `doananh234 | ${title}` : defaultTitle} />
+      <meta name="twitter:title" content={title ? `Anh Doan | ${title}` : defaultTitle} />
       <meta name="twitter:description" content={description || defaultDescription} />
       <meta name="twitter:image:src" content={cover ? `${url}${cover}` : `${url}${Thumbnail}`} />
       <script type="application/ld+json">
         {type === 'NewsArticle' ? structuredDataArticle : structuredDataOrganization}
       </script>
-      <title>{title ? `doananh234 | ${title}` : defaultTitle}</title>
+      <title>{title ? `Anh Doan | ${title}` : defaultTitle}</title>
       <html lang="en" dir="ltr" />
     </Helmet>
   );

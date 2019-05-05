@@ -14,16 +14,16 @@ const NavbarLinks = ({ desktop }) => {
           <Link to="/" activeClassName="current">
             Home
           </Link>
-          <Link to="/about/" activeClassName="current">
+          <Link to="/about" activeClassName="current">
             About
           </Link>
-          <Link to="/project/" activeClassName="current">
+          <Link to="/project" activeClassName="current">
             Project
           </Link>
-          <Link to="/blog/" activeClassName="current">
+          {/* <Link to="/blog/" activeClassName="current">
             Blog
-          </Link>
-          <Link to="/contact/" activeClassName="current">
+          </Link> */}
+          <Link to="/contact" activeClassName="current">
             Contact
           </Link>
           <StyledButton type="button" onClick={toggleTheme}>

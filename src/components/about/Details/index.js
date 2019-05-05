@@ -19,13 +19,12 @@ const Details = () => (
           {`I’m Anh Doan, also known as doananh234, I’m a self-taught Graphic and full stack
           developer. I'm really interested in Technology. Science including mathematics, physics
           science belong to my interests as well, you can know more about me by reading my `}
-          <Link to="/blog">articles</Link>
-.
+          {/* <Link to="/blog">articles</Link>. */}
         </Text>
         <Text theme={theme}>
           {"Currently I'm working remotely at "}
-          <a href="https://obytes.com/?ref=doananh234" target="_blank" rel="noopener noreferrer">
-            Obytes
+          <a href="https://enouvo.com/?ref=doananh234" target="_blank" rel="noopener noreferrer">
+            Enouvo IT Solutions
           </a>
           {' '}
           as a Front end developer.
@@ -38,11 +37,11 @@ const Details = () => (
           </P>
           <P theme={theme}>
             <Img src={theme === 'dark' ? PhoneWhite : Phone} alt="phone" />
-            +212 663-532761
+            +84789472011
           </P>
           <P theme={theme}>
             <Img src={theme === 'dark' ? MarkerWhite : Marker} alt="address" />
-            Nr 23 Lot El Waha, Errachidia, Morocco
+            Da Nang City, Viet Nam.
           </P>
         </DetailsContainer>
       </Wrapper>

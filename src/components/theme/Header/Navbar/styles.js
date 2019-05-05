@@ -24,6 +24,6 @@ export const BrandLogo = styled.div`
   &:hover {
     opacity: 0.7;
     transition: 0.5s;
-    transform: rotate(360deg);
+    ${'' /* transform: rotate(360deg); */}
   }
 `;

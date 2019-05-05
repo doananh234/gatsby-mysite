@@ -82,9 +82,9 @@ doananh234
                 <li>
                   <Link to="/contact">Contact</Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link to="/blog">Blog</Link>
-                </li>
+                </li> */}
               </List>
               <List>
                 <li>Follow me on</li>

@@ -78,7 +78,7 @@ export const Fields = styled.div`
   display: flex;
   align-items: center;
   padding: 0rem 4rem;
-
+  color: #000;
   @media (max-width: 960px) {
     padding: 0rem 2rem;
   }

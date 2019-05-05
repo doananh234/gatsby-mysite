@@ -17,6 +17,7 @@ export const List = styled.ul`
   list-style: none;
   align-self: center;
 
+  color: #fff;
   a {
     color: #fff;
   }
@@ -27,6 +28,7 @@ export const Wrapper = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
+  color: #fff;
 
   @media (max-width: 680px) {
     flex-direction: column;
@@ -50,7 +52,7 @@ export const StyledLogo = styled.div`
   &:hover {
     opacity: 0.7;
     transition: 0.5s;
-    transform: rotate(360deg);
+    ${''}
   }
 `;
 
