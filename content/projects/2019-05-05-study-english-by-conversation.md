@@ -16,7 +16,7 @@ contactInfo:
   email: doananh234@gmail.com
   phoneNubmer: '+84789472011'
 logo: >-
-  https://res.cloudinary.com/csmenouvo/image/upload/v1557051524/playstore-icon.png
+  https://res.cloudinary.com/csmenouvo/image/upload/v1557052151/learningenglishbyconversation.png
 thumbnail: >-
   https://res.cloudinary.com/csmenouvo/image/upload/v1557051724/Screen_Shot_2019-05-05_at_5.10.56_PM.png
 screenShort: >-
