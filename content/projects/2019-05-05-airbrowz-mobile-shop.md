@@ -1,6 +1,6 @@
 ---
 template: project
-isHighlight: false
+isHighlight: true
 name: AIRBROWZ
 title: AIRBROWZ MOBILE SHOP
 subTitle: ' You could be craving a fantastic taste from a new restaurant, or needing a soothing day at a spa. You could even feel like trying out the latest craft beer at a nearby pub- no matter what you crave or are looking for, airbrowz is all you need, simply Tap and start enjoying your savings!  Need to find an accountant around tax time? Stressed from your day? Need a gym? Download airbrowz and start discovering. '
