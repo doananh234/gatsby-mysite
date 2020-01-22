@@ -22,7 +22,7 @@ const Details = () => (
           {/* <Link to="/blog">articles</Link>. */}
         </Text>
         <Text theme={theme}>
-          {"Currently I'm working remotely at "}
+          {"Currently I'm working at "}
           <a href="https://enouvo.com/?ref=doananh234" target="_blank" rel="noopener noreferrer">
             Enouvo IT Solutions
           </a>
