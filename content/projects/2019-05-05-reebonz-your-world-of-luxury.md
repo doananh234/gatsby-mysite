@@ -27,7 +27,7 @@ screenShort:
     https://res.cloudinary.com/csmenouvo/image/upload/v1557049463/reebonzlogo.jpg
   - >-
     https://res.cloudinary.com/csmenouvo/image/upload/v1557049522/Screen_Shot_2019-05-05_at_4.45.05_PM.png
-draft: true
+draft: false
 date: 2019-05-05T09:39:44.145Z
 endDate: 2019-05-05T09:39:44.218Z
 description: >-
