@@ -21,14 +21,6 @@ const Details = () => (
           science belong to my interests as well, you can know more about me by reading my `}
           {/* <Link to="/blog">articles</Link>. */}
         </Text>
-        <Text theme={theme}>
-          {"Currently I'm working remotely at "}
-          <a href="https://enouvo.com/?ref=doananh234" target="_blank" rel="noopener noreferrer">
-            Enouvo IT Solutions
-          </a>
-          {' '}
-          as a Front end developer.
-        </Text>
         <Text theme={theme}>For business inquiries feel free to get in touch with me at:</Text>
         <DetailsContainer>
           <P theme={theme}>

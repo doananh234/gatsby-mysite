@@ -1,18 +1,18 @@
-const fs = require('fs');
-const _ = require('lodash');
-const fetch = require('node-fetch');
-const { buildClientSchema } = require('graphql');
-const { createHttpLink } = require('apollo-link-http');
-const config = require('./data/Config');
+const fs = require('fs')
+const _ = require('lodash')
+const fetch = require('node-fetch')
+const { buildClientSchema } = require('graphql')
+const { createHttpLink } = require('apollo-link-http')
+const config = require('./data/Config')
 
 require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
-});
+})
 
 if (!process.env.GITHUB_TOKEN) {
   require('dotenv').config({
     path: '.env',
-  });
+  })
 }
 
 module.exports = {
@@ -47,25 +47,26 @@ module.exports = {
       options: {
         typeName: 'GitHub',
         fieldName: 'github',
-        createLink: () => createHttpLink({
+        createLink: () =>
+          createHttpLink({
             uri: 'https://api.github.com/graphql',
             headers: {
               Authorization: `bearer ${process.env.GITHUB_TOKEN}`,
             },
             fetch,
           }),
-        createSchema: async() => {
-          const json = JSON.parse(fs.readFileSync(`${__dirname}/github.json`));
-          return buildClientSchema(json.data);
+        createSchema: async () => {
+          const json = JSON.parse(fs.readFileSync(`${__dirname}/github.json`))
+          return buildClientSchema(json.data)
         },
       },
     },
-    {
-      resolve: 'gatsby-plugin-mailchimp',
-      options: {
-        endpoint: process.env.MC_ENDPOINT,
-      },
-    },
+    // {
+    //   resolve: 'gatsby-plugin-mailchimp',
+    //   options: {
+    //     endpoint: process.env.MC_ENDPOINT,
+    //   },
+    // },
     {
       resolve: 'gatsby-plugin-canonical-urls',
       options: {
@@ -109,8 +110,8 @@ module.exports = {
                     edge.node.frontmatter.template
                   }/${_.kebabCase(edge.node.frontmatter.title)}/`,
                   custom_elements: [{ 'content:encoded': edge.node.html }],
-                });
-              });
+                })
+              })
             },
             query: `{
 							allMarkdownRemark(
@@ -248,7 +249,8 @@ module.exports = {
           }
         `,
         output: '/sitemap.xml',
-        serialize: ({ site, allSitePage }) => allSitePage.edges.map(edge => ({
+        serialize: ({ site, allSitePage }) =>
+          allSitePage.edges.map(edge => ({
             url: site.siteMetadata.url + edge.node.path,
             changefreq: 'daily',
             priority: 0.7,
@@ -283,4 +285,4 @@ module.exports = {
   mapping: {
     'MarkdownRemark.frontmatter.category': 'MarkdownRemark.frontmatter.title',
   },
-};
+}

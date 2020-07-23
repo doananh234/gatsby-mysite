@@ -1,16 +1,27 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import addToMailchimp from 'gatsby-plugin-mailchimp';
-import { compose } from 'recompose';
-import { withFormik, Form, Field } from 'formik';
-import * as Yup from 'yup';
-import { Container, CustomButton, ThemeContext } from '..';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { compose } from 'recompose'
+import { withFormik, Form, Field } from 'formik'
+import * as Yup from 'yup'
+import { Container, CustomButton, ThemeContext } from '..'
 import {
- FormWrapper, StyledForm, Subtitle, Title, Message, Error, Fields, Input,
-} from './styles';
+  FormWrapper,
+  StyledForm,
+  Subtitle,
+  Title,
+  Message,
+  Error,
+  Fields,
+  Input,
+} from './styles'
 
 const Wrapper = ({
- errors, isSubmitting, touched, values, handleBlur, handleChange,
+  errors,
+  isSubmitting,
+  touched,
+  values,
+  handleBlur,
+  handleChange,
 }) => (
   <ThemeContext.Consumer>
     {({ theme }) => (
@@ -45,7 +56,10 @@ const Wrapper = ({
             {values.status === 'success' && (
               <Message>
                 Thank you! You will receive your first email shortly
-                <span role="img" aria-label="successfully subscribed to news letter">
+                <span
+                  role="img"
+                  aria-label="successfully subscribed to news letter"
+                >
                   🎉
                 </span>
               </Message>
@@ -58,35 +72,39 @@ const Wrapper = ({
       </FormWrapper>
     )}
   </ThemeContext.Consumer>
-);
+)
 
 const enhance = compose(
   withFormik({
     mapPropsToValues: () => ({ email: '' }),
-    validationSchema: () => Yup.object().shape({
+    validationSchema: () =>
+      Yup.object().shape({
         email: Yup.string()
           .email('Please enter a valid email!')
           .required('Email is required!'),
       }),
-    handleSubmit: async({ email }, { setErrors, setSubmitting, setValues }) => {
-      try {
-        const res = await addToMailchimp(email, {
-          pathname: document.location.pathname,
-        });
-        if (res.result === 'success') {
-          setValues({ status: 'success', msg: res.msg, email });
-          setSubmitting(false);
-        } else {
-          setValues({ status: 'error', msg: res.msg, email });
-          setSubmitting(false);
-        }
-      } catch (err) {
-        setErrors({ message: err, status: 'error' });
-        setSubmitting(false);
-      }
+    handleSubmit: async (
+      { email },
+      { setErrors, setSubmitting, setValues }
+    ) => {
+      // try {
+      //   const res = await addToMailchimp(email, {
+      //     pathname: document.location.pathname,
+      //   });
+      //   if (res.result === 'success') {
+      //     setValues({ status: 'success', msg: res.msg, email });
+      //     setSubmitting(false);
+      //   } else {
+      //     setValues({ status: 'error', msg: res.msg, email });
+      //     setSubmitting(false);
+      //   }
+      // } catch (err) {
+      //   setErrors({ message: err, status: 'error' });
+      //   setSubmitting(false);
+      // }
     },
-  }),
-);
+  })
+)
 
 Wrapper.propTypes = {
   errors: PropTypes.any,
@@ -95,6 +113,6 @@ Wrapper.propTypes = {
   values: PropTypes.any,
   handleBlur: PropTypes.any,
   handleChange: PropTypes.any,
-};
+}
 
-export const Subscribe = enhance(Wrapper);
+export const Subscribe = enhance(Wrapper)
