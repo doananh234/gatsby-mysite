@@ -27,6 +27,7 @@ module.exports = {
     author: config.author,
     rssMetadata: {
       site_url: 'https://doananh234.com',
+      siteUrl: config.url,
       feed_url: `${config.url}${config.siteRss}`,
       title: 'doananh234 | Blog',
       description: config.defaultDescription,
@@ -233,6 +234,7 @@ module.exports = {
             site {
               siteMetadata {
                 url
+                siteUrl
               }
             }
             allSitePage(
