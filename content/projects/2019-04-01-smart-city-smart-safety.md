@@ -27,7 +27,7 @@ screenShort:
     https://res.cloudinary.com/csmenouvo/image/upload/v1554094593/Kuuho/screenshort_Kuuho_306x510_4-1.png
   - >-
     https://res.cloudinary.com/csmenouvo/image/upload/v1554094565/Kuuho/screenshort_Kuuho_306x510_9-1.png
-draft: true
+draft: false
 date: 2019-04-01T05:12:52.488Z
 endDate: 2019-04-01T05:12:52.544Z
 description: |-
