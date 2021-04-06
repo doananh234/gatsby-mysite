@@ -114,6 +114,7 @@ export const SEO = ({
         {type === 'NewsArticle' ? structuredDataArticle : structuredDataOrganization}
       </script>
       <title>{title ? `Anh Doan | ${title}` : defaultTitle}</title>
+      <script data-ad-client="ca-pub-4617388763853360" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script data-ad-client="ca-pub-4617388763853360" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
       <html lang="en" dir="ltr" />
     </Helmet>
   );
