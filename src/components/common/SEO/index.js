@@ -1,6 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Helmet from 'react-helmet';
+import React from 'react'
+import PropTypes from 'prop-types'
+import Helmet from 'react-helmet'
 import {
   url,
   defaultTitle,
@@ -13,8 +13,8 @@ import {
   foundingDate,
   logo,
   author,
-} from '../../../../data/Config';
-import Thumbnail from '../../../../static/me.jpg';
+} from '../../../../data/Config'
+import Thumbnail from '../../../../static/me.jpg'
 
 export const SEO = ({
   title,
@@ -36,7 +36,11 @@ export const SEO = ({
 "headline": "${description}",
 "image": {
 "@type": "imageObject",
-"url": "${cover ? `https://doananh234.com${cover}` : `https://doananh234.com${Thumbnail}`}",
+"url": "${
+    cover
+      ? `https://doananh234.com${cover}`
+      : `https://doananh234.com${Thumbnail}`
+  }",
 "height": "600",
 "width": "800"
 },
@@ -57,7 +61,7 @@ export const SEO = ({
 },
 "description": "${description}",
 "url": "${url}${location}/?ref=doananh234.com"
-}`;
+}`
 
   const structuredDataOrganization = `{ 
 "@context": "http://schema.org",
@@ -90,35 +94,68 @@ export const SEO = ({
 "${socialLinks.instagram}",
 "${socialLinks.github}"
 ]
-}`;
+}`
 
   return (
     <Helmet>
       <meta name="description" content={description || defaultDescription} />
-      <meta name="image" content={cover ? `${url}${cover}` : `${url}${Thumbnail}`} />
+      <meta
+        name="image"
+        content={cover ? `${url}${cover}` : `${url}${Thumbnail}`}
+      />
 
-      <meta property="og:url" content={`${url}${location}/?ref=doananh234.com`} />
-      <meta property="og:type" content={type === 'NewsArticle' ? 'NewsArticle' : 'website'} />
-      <meta property="og:title" content={title ? `Anh Doan | ${title}` : defaultTitle} />
-      <meta property="og:description" content={description || defaultDescription} />
-      <meta property="og:image" content={cover ? `${url}${cover}` : `${url}${Thumbnail}`} />
+      <meta
+        property="og:url"
+        content={`${url}${location}/?ref=doananh234.com`}
+      />
+      <meta
+        property="og:type"
+        content={type === 'NewsArticle' ? 'NewsArticle' : 'website'}
+      />
+      <meta
+        property="og:title"
+        content={title ? `Anh Doan | ${title}` : defaultTitle}
+      />
+      <meta
+        property="og:description"
+        content={description || defaultDescription}
+      />
+      <meta
+        property="og:image"
+        content={cover ? `${url}${cover}` : `${url}${Thumbnail}`}
+      />
       <meta property="fb:app_id" content={social.facebook} />
 
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:creator" content={socialLinks.twitter} />
       <meta name="twitter:site" content={social.twitter} />
-      <meta name="twitter:title" content={title ? `Anh Doan | ${title}` : defaultTitle} />
-      <meta name="twitter:description" content={description || defaultDescription} />
-      <meta name="twitter:image:src" content={cover ? `${url}${cover}` : `${url}${Thumbnail}`} />
+      <meta
+        name="twitter:title"
+        content={title ? `Anh Doan | ${title}` : defaultTitle}
+      />
+      <meta
+        name="twitter:description"
+        content={description || defaultDescription}
+      />
+      <meta
+        name="twitter:image:src"
+        content={cover ? `${url}${cover}` : `${url}${Thumbnail}`}
+      />
       <script type="application/ld+json">
-        {type === 'NewsArticle' ? structuredDataArticle : structuredDataOrganization}
+        {type === 'NewsArticle'
+          ? structuredDataArticle
+          : structuredDataOrganization}
       </script>
       <title>{title ? `Anh Doan | ${title}` : defaultTitle}</title>
-      <script data-ad-client="ca-pub-4617388763853360" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script data-ad-client="ca-pub-4617388763853360" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <script
+        data-ad-client="ca-pub-4617388763853360"
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+      />
       <html lang="en" dir="ltr" />
     </Helmet>
-  );
-};
+  )
+}
 
 SEO.propTypes = {
   title: PropTypes.string,
@@ -129,4 +166,4 @@ SEO.propTypes = {
   dateModified: PropTypes.any,
   cover: PropTypes.any,
   location: PropTypes.any,
-};
+}
