@@ -11,9 +11,9 @@ links:
   web: 'https://www.artcific.com/'
 contactInfo: {}
 logo: 'https://ucarecdn.com/01538c39-5378-45c0-b4e3-49f4ebbe6432/'
-thumbnail: 'https://ucarecdn.com/3cf3106f-241a-4a5f-982d-80f9cc2a005b/'
+thumbnail: 'https://ucarecdn.com/bf2dfc60-9ad1-4a99-9859-7036ee04f345/'
 screenShort:
-  - 'https://ucarecdn.com/37e001fa-1d85-4047-99ce-88b54af1bf9f~1/nth/0/'
+  - 'https://ucarecdn.com/507ad1a5-10a3-4300-8610-76b4544c8696~1/nth/0/'
 draft: false
 date: 2020-12-01T03:36:46.156Z
 endDate: 2021-06-11T03:36:46.268Z
