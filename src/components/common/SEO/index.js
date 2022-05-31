@@ -137,6 +137,7 @@ export const SEO = ({
         name="twitter:description"
         content={description || defaultDescription}
       />
+      <meta name="google-site-verification" content="-jKUpUwsP5Fr-FfgvA4hZAqd3nCTGWYj2ItUXfMqcJY" />
       <meta
         name="twitter:image:src"
         content={cover ? `${url}${cover}` : `${url}${Thumbnail}`}
